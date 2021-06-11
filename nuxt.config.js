@@ -1,3 +1,5 @@
+const MonacoEditorPlugin = require("monaco-editor-webpack-plugin");
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -11,9 +13,9 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -30,7 +32,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     // https://vite.nuxtjs.org/
-    "nuxt-vite"
+    "nuxt-vite",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -38,7 +40,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -47,10 +49,24 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: "en"
-    }
+      lang: "en",
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    plugins: [
+      new MonacoEditorPlugin({
+        // https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+        // Include a subset of languages support
+        // Some language extensions like typescript are so huge that may impact build performance
+        // e.g. Build full languages support with webpack 4.0 takes over 80 seconds
+        // Languages are loaded on demand at runtime
+        languages: [
+          "javascript",
+          // "css", "html", "typescript"
+        ],
+      }),
+    ],
+  },
 };

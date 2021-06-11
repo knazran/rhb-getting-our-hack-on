@@ -1,26 +1,15 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="h-screen">
+    <!-- flex flex-col h-screen -->
     <NavBar />
-    <section class="overflow-auto bg-gray-700 no-scrollbar h-screen">
+    <!-- <section class="h-screen overflow-auto bg-gray-700 no-scrollbar"> -->
+    <div class="bg-gray-700">
       <Nuxt />
-    </section>
-    
+    </div>
+    <!-- </section> -->
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
-
-<style>
-/* Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-</style>

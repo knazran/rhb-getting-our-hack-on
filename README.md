@@ -4,10 +4,14 @@
 
 ```bash
 # install dependencies
-$ yarn install
+npm install
+# or 
+yarn
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+npm run dev
+# or
+yarn dev
 
 # build for production and launch server
 $ yarn build

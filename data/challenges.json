@@ -1,29 +1,49 @@
 {
-    "challenges": [
-        {
-        "key": "arrays",
-        "title": "Arrays",
-        "description": "some description",
-        "num_question": "(3/4)"
-        },
-        {
-        "key": "dictionary",
-        "title": "Dictionaries and Hashmaps",
-        "description": "some description",
-        "num_question": "(1/3)"
-        },
-        {
-        "key": "sorting",
-        "title": "Sorting",
-        "description": "some description",
-        "num_question": "(0/8)"
-        },
-        {
-        "key": "dynamic-programming",
-        "title": "Dynamic Programming",
-        "description": "some description",
-        "num_question": "(0/12)"
-        }
-    ]
+  "challenges": [
+    {
+      "key": "print",
+      "title": "Print",
+      "description": "some description",
+      "num_question": "(1/1)",
+      "task": "Print \"Hello, World!\".",
+      "code": "console.log('Hello, World!')",
+      "expectedOutput": "Hello, World!"
+    },
+    {
+      "key": "arrays",
+      "title": "Arrays",
+      "description": "some description",
+      "num_question": "(3/4)",
+      "task": "Print \"Arrays\".",
+      "code": "console.log('Arrays')",
+      "expectedOutput": "Arrays"
+    },
+    {
+      "key": "dictionary",
+      "title": "Dictionaries and Hashmaps",
+      "description": "some description",
+      "num_question": "(1/3)",
+      "task": "Print \"Hello, World!\".",
+      "code": "console.log('Hello, World!')",
+      "expectedOutput": "Hello, World!"
+    },
+    {
+      "key": "sorting",
+      "title": "Sorting",
+      "description": "some description",
+      "num_question": "(0/8)",
+      "task": "Print \"Hello, World!\".",
+      "code": "console.log('Hello, World!')",
+      "expectedOutput": "Hello, World!"
+    },
+    {
+      "key": "dynamic-programming",
+      "title": "Dynamic Programming",
+      "description": "some description",
+      "num_question": "(0/12)",
+      "task": "Print \"Hello, World!\".",
+      "code": "console.log('Hello, World!')",
+      "expectedOutput": "Hello, World!"
+    }
+  ]
 }
-
