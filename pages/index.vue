@@ -14,7 +14,7 @@
       <div 
         v-for='challenge in challengeList' 
         :key="challenge.key"
-        class='py-3 px-6 bg-white shadow-lg'
+        class='py-3 px-6 pr-2 bg-white shadow-lg'
       >
         <p class='text-xs font-light text-right text-gray-400'> {{challenge.num_question}} </p>
         <h3 class='font-bold text-2xl tracking-relaxed text-gray-800 my-2'> {{challenge.title}} </h3>
