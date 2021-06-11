@@ -9,7 +9,23 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'heavy-metal': {
+          DEFAULT: '#21231F',
+          '50': '#949A8D',
+          '100': '#878E80',
+          '200': '#6E7467',
+          '300': '#54594F',
+          '400': '#3B3E37',
+          '500': '#21231F',
+          '600': '#080807',
+          '700': '#000000',
+          '800': '#000000',
+          '900': '#000000'
+        }
+      }
+    }
   },
   variants: {
     extend: {}

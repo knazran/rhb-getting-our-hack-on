@@ -44,7 +44,6 @@ export default {
 
   computed: {
     challengeList() {
-      // return this.$store.getters.getChallenges
       console.log(challengesConfigList)
       return challengesConfigList['challenges']
     },
