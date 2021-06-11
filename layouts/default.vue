@@ -1,14 +1,16 @@
 <template>
   <div class="flex flex-col h-screen">
-    <section class="overflow-auto bg-gray-200 no-scrollbar h-[92vh]">
+    <NavBar />
+    <section class="overflow-auto bg-gray-700 no-scrollbar h-screen">
       <Nuxt />
     </section>
-    <NavBar />
+    
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style>
