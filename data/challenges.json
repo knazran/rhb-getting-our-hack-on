@@ -1,0 +1,25 @@
+{
+    "challenges": [
+        {
+        "key": "arrays",
+        "title": "Arrays",
+        "description": "some description"
+        },
+        {
+        "key": "dictionary",
+        "title": "Dictionaries and Hashmaps",
+        "description": "some description"
+        },
+        {
+        "key": "sorting",
+        "title": "Sorting",
+        "description": "some description"
+        },
+        {
+        "key": "dynamic-programming",
+        "title": "Dynamic Programming",
+        "description": "some description"
+        }
+    ]
+}
+

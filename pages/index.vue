@@ -9,9 +9,9 @@
     <!-- Main -->
     <div class="py-8 px-8 grid grid-cols-3 gap-4">
       <div 
-        v-for='challenge in challenges' 
+        v-for='challenge in challengeList' 
         :key="challenge.key"
-        class='py-4 px-8 bg-white rounded-md'
+        class='py-4 px-8 bg-white'
       >
         <h3 class='font-semibold text-xl tracking-relaxed'> {{challenge.title}} </h3>
         <p class='text-sm font-light'> {{challenge.description}} </p>
@@ -30,33 +30,21 @@
 </template>
 
 <script>
+import challengesConfigList from '~/data/challenges.json';
+
 export default {
   data() {
     return {
-      challenges: [
-        {
-          'key': 'arrays',
-          'title': 'Arrays',
-          'description': 'some description'
-        },
-        {
-          'key': 'dictionary',
-          'title': 'Dictionaries and Hashmaps',
-          'description': 'some description'
-        },
-        {
-          'key': 'sorting',
-          'title': 'Sorting',
-          'description': 'some description'
-        },
-        {
-          'key': 'dynamic-programming',
-          'title': 'Dynamic Programming',
-          'description': 'some description'
-        },
-      ]
     }
-  }
+  },
+
+  computed: {
+    challengeList() {
+      // return this.$store.getters.getChallenges
+      console.log(challengesConfigList)
+      return challengesConfigList['challenges']
+    },
+  },
 };
 </script>
 
