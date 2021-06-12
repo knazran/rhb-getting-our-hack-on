@@ -1,25 +1,74 @@
 {
-    "candidates": [
-        {
-          "name": "Jane Cooper",
-          "image":
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-          "email": "jane.cooper@example.com",
-          "completed_challeges": 23,
-          "skillset": ["Vue", "Node", "Machine Learning"],
-          "hiring": "Yes",
-          "score": 1399
-        },
-        {
-          "name": "Khairul Nazran",
-          "image":
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          "email": "nazran@umich.edu",
-          "completed_challeges": 69,
-          "skillset": ["Data Engineering", "Node", "Go"],
-          "hiring": "Yes",
-          "score": 2100
-        }
-      ]
-  }
-  
+  "candidates": [
+    {
+      "name": "Rohan Krishnalingam",
+      "image": "/rohan.jpeg",
+      "email": "Rohan.Krishnalingam@rhb.com",
+      "completed_challeges": 3002,
+      "skillset": ["PHP", "Node", "Python"],
+      "hiring": "Yes",
+      "score": 1399,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/j/1494"
+    },
+    {
+      "name": "Ganesh Mahendranathan",
+      "image": "/ganesh.jpeg",
+      "email": "Ganesh.Mahendranathan@rhb.com",
+      "completed_challeges": 203,
+      "skillset": ["JavaScript", "Node", "PHP"],
+      "hiring": "Yes",
+      "score": 2090,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1002384"
+    },
+    {
+      "name": "Shanmugam Dev Raaj",
+      "image": "/shanmugam.jpeg",
+      "email": "Shanmugam.Dev.Raaj@rhb.com",
+      "completed_challeges": 23,
+      "skillset": ["Vue", "React", "Python"],
+      "hiring": "No",
+      "score": 1212,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1002415"
+    },
+    {
+      "name": "Leong Yok Tien",
+      "image": "/tien.png",
+      "email": "tien@seek.com",
+      "completed_challeges": 69,
+      "skillset": ["Data Engineering", "Node", "Go"],
+      "hiring": "Yes",
+      "score": 2100,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1001868"
+    },
+    {
+      "name": "Errolyn Tan",
+      "image": "/errolyn.jpeg",
+      "email": "errolyn.tan@rhb.com",
+      "completed_challeges": 47,
+      "skillset": ["React", "Python", "AWS"],
+      "hiring": "No",
+      "score": 1860,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1002512"
+    },
+    {
+      "name": "Suba Letchuman",
+      "image": "/suba.jpeg",
+      "email": "Suba.Letchuman@rhb.com",
+      "completed_challeges": 98,
+      "skillset": ["Vue", "Node", "Machine Learning"],
+      "hiring": "Yes",
+      "score": 1399,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1002435"
+    },
+    {
+      "name": "Inbaraj Suppiah",
+      "image": "/inbaraj.jpeg",
+      "email": "Inbaraj.Suppiah@jomhack.com",
+      "completed_challeges": 98,
+      "skillset": ["PHP", "Go", "AWS"],
+      "hiring": "Yes",
+      "score": 1599,
+      "jd_link": "https://rhbgroup.is-hiring.com/jobcampaign/view/1002418"
+    }
+  ]
+}
