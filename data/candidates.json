@@ -6,7 +6,7 @@
             "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
           "email": "jane.cooper@example.com",
           "completed_challeges": 23,
-          "skillset": "VueJS, NodeJS, Machine Learni...",
+          "skillset": ["Vue", "Node", "Machine Learning"],
           "hiring": "Yes",
           "score": 1399
         },
@@ -16,7 +16,7 @@
             "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
           "email": "nazran@umich.edu",
           "completed_challeges": 69,
-          "skillset": "Data Engineering, NodeJS, Golang",
+          "skillset": ["Data Engineering", "Node", "Go"],
           "hiring": "Yes",
           "score": 2100
         }

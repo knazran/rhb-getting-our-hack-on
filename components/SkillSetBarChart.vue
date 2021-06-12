@@ -36,10 +36,6 @@ export default {
         tooltip: {
             show: true,
             trigger: 'item',
-            // formatter: function (a) {
-            //     my_json_data = get_and_format_my_data()
-            //     return `${my_json_data}`
-            // }
         },
         yAxis: {
           splitLine: {
@@ -72,13 +68,7 @@ export default {
     var myChart = echarts.init(document.getElementById('skillset-chart'));
     myChart.setOption(this.option);
 
-    // myChart.on('click', function(params) {
-    //     console.log(params)
-    //     this.$emit('skill-bar-click', {name: params.name, value: params.value})
-    // });
-
     myChart.on('click', (params) => { 
-      console.log(params)
       this.$emit('skill-bar-click', {name: params.name, value: params.value})
     });
   }

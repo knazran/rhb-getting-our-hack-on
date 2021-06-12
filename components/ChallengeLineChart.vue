@@ -17,6 +17,10 @@ export default {
           top: "6%",
           containLabel: true,
         },
+        tooltip: {
+            show: true,
+            trigger: 'item',
+        },
         xAxis: {
           type: "category",
           data: ["2/5", "9/5", "16/5", "23/5", "30/5", "6/6", "13/6"],

@@ -45,6 +45,9 @@ module.exports = {
         },
         'fb-blue': {
           DEFAULT: '#1877f2'
+        },
+        'linkedin-blue': {
+          DEFAULT: '#0067B1'
         }
       },
     },

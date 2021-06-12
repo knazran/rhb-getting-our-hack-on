@@ -233,7 +233,7 @@
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                      <tr v-for="candidate in candidateList" :key="candidate.email">
+                      <tr v-for="candidate in candidateList" :key="candidate.email" class='relative'>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="flex items-center">
                             <div class="flex-shrink-0 h-10 w-10">
@@ -250,8 +250,13 @@
                           <!-- <div class="text-sm text-gray-500">Optimization</div> -->
                         </td>
                         <td
-                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center"
-                        >{{candidate.skillset}}</td>
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 flex flex-col items-center text-left"
+                        >
+                          <p v-for="skill in candidate.skillset" :key="skill">
+                            {{skill}}
+                          </p>
+                          
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
                           <span
                             class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
@@ -264,6 +269,7 @@
                           <button
                             class="py-2 px-4 bg-rhb-blue-700 hover:bg-rhb-blue-800 text-white rounded-lg"
                           >Share JD</button>
+                          <ChevronRightIcon class='ml-4 my-1 h-6 w-6 inline'/>
                         </td>
                       </tr>
                     </tbody>
@@ -282,7 +288,7 @@
 </template>
 
 <script>
-import { UsersIcon, StarIcon, DotsVerticalIcon } from "@vue-hero-icons/outline";
+import { UsersIcon, StarIcon, DotsVerticalIcon, ChevronRightIcon } from "@vue-hero-icons/outline";
 import { ArrowDownIcon, ArrowUpIcon } from "@vue-hero-icons/solid";
 
 import candidateConfigList from "~/data/candidates.json";
@@ -294,6 +300,7 @@ export default {
     StarIcon,
     ArrowDownIcon,
     ArrowUpIcon,
+    ChevronRightIcon
   },
   data() {
     return {
