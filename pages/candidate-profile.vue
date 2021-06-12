@@ -61,9 +61,9 @@
 
               <div class="mb-12">
                 <div class="w-full h-1 my-1 bg-rhb-blue-500"></div>
-                <p class="text-base font-light text-gray-400">
+                <NuxtLink to='/hiring-dashboard' class="text-base font-light text-gray-400">
                   <span class="underline">Review</span> your solutions
-                </p>
+                </NuxtLink>
               </div>
             </div>
             <div class="w-1 h-full bg-rhb-blue-500"></div>
@@ -168,7 +168,7 @@
           </div>
 
           <NuxtLink
-            to="/"
+            to="/hiring-dashboard"
             class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
           >APPLY</NuxtLink>
         </div>
