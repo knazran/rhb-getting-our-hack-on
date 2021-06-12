@@ -73,9 +73,7 @@ export default {
 
   vite: {
     optimizeDeps: {
-      exclude: [
-        'sdk.js'
-      ]
-    }
-  }
+      exclude: ["vue-chartjs", "chart.js", "chart.esm.js"],
+    },
+  },
 };

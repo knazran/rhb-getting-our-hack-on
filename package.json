@@ -1,5 +1,5 @@
 {
-  "name": "rhb-crypto-app",
+  "name": "getting-our-hack-on",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
+    "@tailwindcss/forms": "^0.3.3",
     "@vue-hero-icons/outline": "^1.7.2",
     "@vue-hero-icons/solid": "^1.7.2",
     "chart.js": "^3.3.2",
