@@ -1,0 +1,35 @@
+[
+  {
+    "key": "sdlkfnkjfew",
+    "name": "Mujahid Anuar",
+    "email": "mujahid.f.anuar@wisc.edu",
+    "image": "/mujahid.jpg",
+    "status": "Offered",
+    "recruiter": "Suba Letchuman",
+    "tat": 40,
+    "blocker": "",
+    "start_date": "12 March 2021"
+  },
+  {
+    "key": "2lkdldl",
+    "name": "Khairul Nazran",
+    "email": "nazran@umich.edu",
+    "image": "/naz.jpeg",
+    "status": "Assesment Complete",
+    "recruiter": "Suba Letchuman",
+    "tat": 42,
+    "blocker": "",
+    "start_date": "25 May 2021"
+  },
+  {
+    "key": "sl30090",
+    "name": "Leong Yok Tien",
+    "email": "tien@seek.com",
+    "image": "/tien.png",
+    "status": "Signed",
+    "recruiter": "Suba Letchuman",
+    "tat": 35,
+    "blocker": "",
+    "start_date": "3 April 2021"
+  }
+]
