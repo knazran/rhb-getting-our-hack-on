@@ -69,4 +69,14 @@ export default {
       }),
     ],
   },
+
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        'vue-chartjs',
+        'chart.js',
+        'chart.esm.js'
+      ]
+    }
+  }
 };
