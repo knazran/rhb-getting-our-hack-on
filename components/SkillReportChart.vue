@@ -39,7 +39,7 @@ export default {
             {
               min: 2,
               max: 11,
-              color: "#9ad74a",
+              color: "#B1E074",
             },
             {
               min: 11,
@@ -67,21 +67,21 @@ export default {
           //   show: false,
           color: "#fffff",
           axisPointer: {
-              type:'line',
+            type: "line",
             value: "24th percentile",
             snap: true,
             lineStyle: {
-              color: "#9ad74a",
+              color: "#81C32B",
               width: 2,
             },
             label: {
               show: true,
-              backgroundColor: "#9ad74a",
-              margin: 6
+              backgroundColor: "#81C32B",
+              margin: 6,
             },
             handle: {
               show: true,
-              color: "#9ad74a",
+              color: "#81C32B",
             },
           },
           axisTick: {
@@ -96,6 +96,12 @@ export default {
           type: "value",
           //   scale: true,
           show: true,
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: true,
+          },
         },
         series: [
           {
@@ -117,7 +123,7 @@ export default {
                   symbol: "circle",
                   label: {
                     // position: "left",
-                    position: ['-130%', '-95%'],
+                    position: ["-130%", "-120%"],
                     show: true,
                     color: "#FFFFFF",
                     fontSize: 16,
