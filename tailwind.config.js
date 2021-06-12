@@ -52,6 +52,32 @@ module.exports = {
         'midnight-blue': {
           DEFAULT: '#0f0d2a'
         },
+        'conifer': {
+          DEFAULT: '#9AD74A',
+          '50': '#FFFFFF',
+          '100': '#F7FCF1',
+          '200': '#E0F3C7',
+          '300': '#C9E99E',
+          '400': '#B1E074',
+          '500': '#9AD74A',
+          '600': '#81C32B',
+          '700': '#669922',
+          '800': '#4A6F19',
+          '900': '#2E460F'
+        },
+        'milk-punch': {
+          DEFAULT: '#FFF6D9',
+          '50': '#FFFFFF',
+          '100': '#FFFFFF',
+          '200': '#FFFFFF',
+          '300': '#FFFFFF',
+          '400': '#FFFFFF',
+          '500': '#FFF6D9',
+          '600': '#FFEAA6',
+          '700': '#FFDE73',
+          '800': '#FFD240',
+          '900': '#FFC60D'
+        },
       },
     },
   },

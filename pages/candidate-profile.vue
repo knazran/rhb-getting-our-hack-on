@@ -15,7 +15,7 @@
 
         <!-- View Two -->
         <div class="w-9/12 rounded-md px-4">
-          <SkillReportCard />
+          <SkillReportCard mode="dark"/>
         </div>
       </div>
       <div class='flex justify-end py-2 '>
