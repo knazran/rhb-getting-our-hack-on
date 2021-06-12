@@ -3,10 +3,10 @@
     class="rounded-20 flex flex-col justify-between h-full"
     :style="{ backgroundImage: getBackgroundImage}"
     style="background-size: 100% 100%;"
-    :class="getTextColor"
+    :class="getBackgroundColor"
   >
     <!-- style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2); background-size: 100% 100%;"  -->
-    <div class="flex flex-col items-center py-8">
+    <div class="flex flex-col items-center py-8" :class="getTextColor">
       <img class="h-28 w-28 mb-4" src="~/assets/profile 1.png" />
       <h3 class="uppercase font-semibold text-lg">Leong Yok Tien</h3>
       <p class="font-light text-xs opacity-50" >Tech Lead @ SEEK</p>
@@ -55,6 +55,11 @@ export default {
         return "none";
       }
     },
+    getBackgroundColor() {
+      if (this.mode === "light") {
+        return "bg-rhb-blue-200";
+      }
+    },
     getTextColor(){
       if (this.mode === 'dark') {
         return "text-white"
@@ -65,10 +70,10 @@ export default {
     },
     getSectionColor(){
       if (this.mode === 'dark') {
-        return "bg-rhb-blue-500 bg-opacity-30 "
+        return "bg-rhb-blue-500 bg-opacity-30 text-white"
       }
       if (this.mode === 'light') {
-        return "bg-rhb-blue-500"
+        return "text-gray-800"
       }
       
     }

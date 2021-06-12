@@ -92,15 +92,18 @@ export default {
           axisPointer: {
             type: "line",
             value: "24th percentile",
-            snap: true,
             lineStyle: {
               color: "#81C32B",
               width: 2,
             },
             label: {
-              show: true,
-              backgroundColor: "#81C32B",
-              margin: 6,
+              // show: true,
+              backgroundColor: "#B1E074",
+              margin: 3,
+              color: '#000000',
+              // fontWeight: "bold",
+              fontSize: 16,
+              padding: 10
             },
             handle: {
               show: true,

@@ -6,7 +6,7 @@
       <div class="flex items-stretch my-6 text-white">
         <!-- View One -->
         <div class="w-3/12 px-4 rounded-20 2xl:px-8">
-          <ProfileCard mode='dark'/>
+          <ProfileCard mode='light'/>
         </div>
 
         <!-- View Two -->
