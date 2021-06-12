@@ -1,78 +1,53 @@
 <template>
-  <main class="flex flex-col bg-tgray-900 min-h-screen text-white">
-    <div class="container mx-auto p-10">
-      <!-- Header -->
-      <div class="flex-shrink-0">
-        <h1 class="text-2xl font-semibold tracking-wide">Profile</h1>
-        <div class="my-1 h-1 w-24 bg-rhb-blue-500"></div>
-      </div>
-
-      <div class="flex my-6 text-white items-stretch">
-        <!-- View One -->
-        <div class="w-3/12 rounded-md px-4 2xl:px-8">
-          <ProfileCard />
-        </div>
-
-        <!-- View Two -->
-        <div class="w-9/12 rounded-md px-4">
-          <SkillReportCard mode="dark"/>
-        </div>
-      </div>
-      <div class='flex justify-end py-2 '>
-        <div class='flex space-x-6 align-baseline mr-6'>
-          <p class='text-white text-sm mr-4'>Share your Skill IQ!</p>
-        <IconifyIcon :icon="icons.twitter" height="24" />
-        <IconifyIcon :icon="icons.linkedin" height="24" />
-        <IconifyIcon :icon="icons.stackOverflow" height="22" />
-        </div>
-        
-
-        <!-- <NuxtLink to="/hiring-dashboard">
-        <button class="py-1 px-8 rounded-md border border-white text-white text-sm">See How Pro</button>
-      </NuxtLink> -->
-      </div>
-      
-    </div>
-
-    <section class="px-10 py-4 container mx-auto">
+  <main class="flex flex-col min-h-screen bg-white">
+    <!-- light mode candidate assessment -->
+    <section class="p-10">
       <div class="flex-shrink-0 mb-6">
-        <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">Challenge Details</h1>
+        <h1 class="text-3xl font-semibold tracking-wide">
+          CANDIDATE ASSESSMENT
+        </h1>
         <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
       </div>
 
-      <div class="flex space-x-2">
-        <div
-          class="grid w-full grid-cols-3 gap-4 p-5 py-8 border-2 shadow-2xl border-tgray-800 bg-tgray-700 rounded-2xl hover:border-2 hover:border-rhb-blue-500"
-        >
-          <div class="flex justify-around col-span-1">
-            <div class="flex flex-col justify-between">
-              <div>
-                <p class="text-base font-light text-gray-400">Good job! You did better than</p>
-                <p class="text-base font-bold text-gray-200">24% of your peers</p>
-              </div>
-
-              <div>
-                <p class="mb-4 text-base font-bold text-gray-200">Keep going:</p>
-                <NuxtLink
-                  to="/"
-                  class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-                >MORE CHALLENGE</NuxtLink>
-              </div>
-
-              <div class="mb-12">
-                <div class="w-full h-1 my-1 bg-rhb-blue-500"></div>
-                <NuxtLink to='/hiring-dashboard' class="text-base font-light text-gray-400">
-                  <span class="underline">Review</span> your solutions
-                </NuxtLink>
-              </div>
+      <div
+        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white border-2 border-gray-100 shadow-2xl  rounded-2xl hover:border-2 hover:border-rhb-blue-500"
+      >
+        <div class="flex justify-around col-span-1">
+          <div class="flex flex-col justify-between">
+            <div>
+              <p class="text-base font-light text-gray-500">
+                Tien did better than
+              </p>
+              <p class="text-base font-bold text-gray-700">24% of your peers</p>
             </div>
-            <div class="w-1 h-full bg-rhb-blue-500"></div>
-          </div>
 
-          <div class="flex flex-col w-full col-span-2">
+            <div>
+              <p class="mb-4 text-base font-bold text-gray-700">
+                Looking for someone else?
+              </p>
+              <NuxtLink
+                to="/hiring-dashboard"
+                class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+              >
+                MORE CANDIDATES
+              </NuxtLink>
+            </div>
+
+            <div>
+              <div class="w-full h-1 my-1 bg-rhb-blue-500"></div>
+              <p class="text-base font-light text-gray-500">
+                <span class="underline">Review</span> Tien's solutions
+              </p>
+            </div>
+          </div>
+          <div class="w-1 h-full bg-rhb-blue-500"></div>
+        </div>
+
+        <div class="flex flex-col w-full col-span-2">
+          <div class="flex items-start justify-between">
             <div>
               <h2
-                class="flex items-center space-x-2 text-3xl font-bold text-tgray-200 tracking-relaxed"
+                class="flex items-center space-x-2 text-3xl font-bold  text-tgray-800 tracking-relaxed"
               >
                 <span>Personalised Skill Analysis</span>
                 <svg
@@ -90,30 +65,43 @@
                   />
                 </svg>
               </h2>
-              <p class="mb-8 text-base font-light text-gray-400">Based on 12 challenges taken</p>
+              <p class="mb-8 text-base font-light text-gray-500">
+                Based on 12 challenges taken
+              </p>
+            </div>
+            <span class="px-4 py-2 text-white bg-green-400 rounded-full"
+              >OPEN FOR HIRE</span
+            >
+          </div>
+
+          <div class="grid w-full grid-cols-2 gap-8">
+            <div>
+              <div class="w-4/5 h-1 my-1 bg-green-500"></div>
+              <h3
+                class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed"
+              >
+                Tien's strengths
+              </h3>
+
+              <div class="flex flex-col space-y-2">
+                <p class="text-base text-gray-800">Concurrency</p>
+                <p class="text-base text-gray-800">Web and Network</p>
+                <p class="text-base text-gray-800">Node.js Fundamentals</p>
+              </div>
             </div>
 
-            <div class="grid w-full grid-cols-2 gap-8 mb-16">
-              <div>
-                <div class="w-4/5 h-1 my-1 bg-green-500"></div>
-                <h3 class="mb-4 text-2xl font-bold text-tgray-200 tracking-relaxed">Your strengths</h3>
+            <div>
+              <div class="w-4/5 h-1 my-1 bg-red-500"></div>
+              <h3
+                class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed"
+              >
+                Tien's gaps
+              </h3>
 
-                <div class="flex flex-col space-y-2">
-                  <p class="text-base text-gray-400">Concurrency</p>
-                  <p class="text-base text-gray-400">Web and Network</p>
-                  <p class="text-base text-gray-400">Node.js Fundamentals</p>
-                </div>
-              </div>
-
-              <div>
-                <div class="w-4/5 h-1 my-1 bg-red-500"></div>
-                <h3 class="mb-4 text-2xl font-bold text-tgray-200 tracking-relaxed">Your gaps</h3>
-
-                <div class="flex flex-col space-y-2">
-                  <p class="text-base text-gray-400">CLI, REPL and Globals</p>
-                  <p class="text-base text-gray-400">Modules and NPM</p>
-                  <p class="text-base text-gray-400">Advanced Topics</p>
-                </div>
+              <div class="flex flex-col space-y-2">
+                <p class="text-base text-gray-800">CLI, REPL and Globals</p>
+                <p class="text-base text-gray-800">Modules and NPM</p>
+                <p class="text-base text-gray-800">Advanced Topics</p>
               </div>
             </div>
           </div>
@@ -121,56 +109,44 @@
       </div>
     </section>
 
-    <!-- dark mode job opening -->
-    <section class="p-10 container mx-auto">
-      <div class="flex flex-row items-center justify-between mb-6">
-        <div class="flex-shrink-0">
-          <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">Job Opening</h1>
-          <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
-        </div>
-        <div class="flex items-center justify-between space-x-4">
-          <span class="flex flex-col flex-grow" id="availability-label">
-            <span class="text-base font-medium text-gray-300">Open for employment?</span>
-          </span>
-          <button
-            type="button"
-            class="relative inline-flex flex-shrink-0 h-6 transition-colors duration-200 ease-in-out border-2 border-transparent rounded-full cursor-pointer w-11 focus:outline-none"
-            :class="isEnabled ? 'bg-green-600' : 'bg-gray-600'"
-            role="switch"
-            aria-checked="false"
-            aria-labelledby="availability-label"
-            @click="isEnabled = !isEnabled"
-          >
-            <span class="sr-only">Toggle employment offers</span>
-            <span
-              aria-hidden="true"
-              class="inline-block w-5 h-5 transition duration-200 ease-in-out transform bg-gray-300 rounded-full shadow pointer-events-none ring-0"
-              :class="isEnabled ? 'translate-x-5' : 'translate-x-0'"
-            ></span>
-          </button>
-        </div>
+    <!-- light mode best roles -->
+    <section class="p-10">
+      <div class="flex-shrink-0 mb-6">
+        <h1 class="text-3xl font-semibold tracking-wide">BEST ROLES</h1>
+        <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
       </div>
 
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-3 gap-4">
         <div
-          v-for="job in jobs"
-          :key="job.key"
-          class="p-4 border-2 shadow-2xl bg-tgray-700 rounded-20 border-tgray-800 hover:border-2 hover:border-rhb-blue-500"
+          v-for="role in roles"
+          :key="role.key"
+          class="p-5 bg-white border-2 border-gray-100 shadow-2xl  rounded-2xl hover:border-2 hover:border-rhb-blue-500"
         >
-          <div class="flex">
-            <div class="w-4/5">
-              <h2 class="mt-6 text-2xl font-bold text-tgray-200 tracking-relaxed">{{ job.title }}</h2>
-              <p class="mb-8 text-sm font-light text-gray-400">{{ job.description }}</p>
-            </div>
-            <div class="w-1/5">
-              <p class="text-sm text-right text-tgray-400">{{ job.date }}</p>
-            </div>
+          <p class="text-base text-right text-tgray-500">
+            {{ role.date }}
+          </p>
+          <h2 class="text-3xl font-bold text-tgray-800 tracking-relaxed">
+            {{ role.title }}
+          </h2>
+          <p class="mb-8 text-sm font-light text-gray-500">
+            {{ role.description }}
+          </p>
+
+          <div class="flex mb-4 space-x-2">
+            <span
+              v-for="label in role.labels"
+              :class="label === 'hotjob' ? 'bg-red-500' : 'bg-blue-500'"
+              class="px-8 py-1.5 text-white rounded-full"
+              >{{ label }}</span
+            >
           </div>
 
           <NuxtLink
-            to="/hiring-dashboard"
-            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-          >APPLY</NuxtLink>
+            to="/"
+            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+          >
+            SEND TO TIEN
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -180,22 +156,22 @@
 <script>
 import SkillReportCard from "~/components/SkillReportCard.vue";
 import IconifyIcon from "@iconify/vue";
-import twitterOutlined from '@iconify/icons-ant-design/twitter-outlined'
+import twitterOutlined from "@iconify/icons-ant-design/twitter-outlined";
 import linkedinFilled from "@iconify/icons-ant-design/linkedin-filled";
-import stackoverflowIcon from '@iconify-icons/cib/stackoverflow';
+import stackoverflowIcon from "@iconify-icons/cib/stackoverflow";
 
-import jobs from "~/data/jobs.json";
+import roles from "~/data/roles.json";
 
 export default {
   components: { SkillReportCard, IconifyIcon },
+  layout: "admin",
   data() {
     return {
-      jobs,
-      isEnabled: false,
+      roles,
       icons: {
         twitter: twitterOutlined,
         linkedin: linkedinFilled,
-        stackOverflow: stackoverflowIcon
+        stackOverflow: stackoverflowIcon,
       },
     };
   },

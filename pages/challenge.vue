@@ -450,7 +450,7 @@ export default {
       setTimeout(() => {
         this.submitStatus = "stop";
         setTimeout(() => {
-          this.$router.push({ name: "candidate-profile" });
+          this.$router.push({ name: "profile" });
         }, 500);
       }, timeout);
     },
