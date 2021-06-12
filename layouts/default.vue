@@ -3,7 +3,7 @@
     <!-- flex flex-col h-screen -->
     <NavBar />
     <!-- <section class="h-screen overflow-auto bg-gray-700 no-scrollbar"> -->
-    <div class="bg-gray-700">
+    <div class="bg-tgray-900">
       <Nuxt />
     </div>
     <!-- </section> -->

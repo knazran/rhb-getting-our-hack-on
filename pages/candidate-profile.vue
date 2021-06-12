@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col bg-gray-900 min-h-screen">
+  <main class="flex flex-col bg-tgray-900 min-h-screen">
     <div class="container mx-auto py-4 px-8">
       <!-- Header -->
       <div class="relative flex items-stretch">
