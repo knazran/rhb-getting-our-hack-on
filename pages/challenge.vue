@@ -1,11 +1,20 @@
 <template>
   <main class="flex flex-col h-screen">
     <!-- header -->
-    <div class="flex flex-row items-center justify-between p-2 bg-tgray-900">
-      <h1 class="px-2 text-lg font-light text-gray-300">{{ title }}</h1>
+    <div
+      class="flex flex-row items-center justify-between p-2"
+      :class="isRHB ? 'bg-rhb-blue-500' : 'bg-tgray-900'"
+    >
+      <h1
+        class="px-2 text-lg"
+        :class="isRHB ? 'text-white font-bold' : 'font-light text-gray-300'"
+      >
+        {{ title }}
+      </h1>
       <Timer
         :time="3 * 60 * 1000"
-        class="inline-flex text-tgray-400"
+        class="inline-flex"
+        :class="isRHB ? 'text-white font-bold ' : 'text-tgray-400'"
         v-slot="{ minutes, seconds }"
       >
         <svg
@@ -31,7 +40,12 @@
       </Timer>
       <button
         @click="submitCode()"
-        class="inline-flex items-center px-2 py-1 text-xs text-gray-100 border rounded-md  border-tgray-600 hover:bg-tgray-800 focus:bg-tgray-800 focus:outline-none"
+        class="inline-flex items-center px-2 py-1 text-xs rounded-md  focus:outline-none"
+        :class="
+          isRHB
+            ? 'bg-rhb-blue-200 text-rhb-blue-600 hover:bg-rhb-blue-300 focus:bg-rhb-blue-300'
+            : 'text-gray-100 border border-tgray-600 hover:bg-tgray-800 focus:bg-tgray-800'
+        "
       >
         <svg
           v-if="submitStatus === 'stop'"
@@ -50,7 +64,8 @@
         </svg>
         <svg
           v-else-if="submitStatus === 'running'"
-          class="w-4 h-4 mr-1 -ml-1 text-white animate-spin"
+          class="w-4 h-4 mr-1 -ml-1 animate-spin"
+          :class="isRHB ? '' : 'text-white'"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -80,14 +95,17 @@
       <div
         class="w-1/2 h-full text-white border-t border-r border-gray-600  bg-tgray-900"
       >
-        <div class="border-b border-gray-600 flexborder-b">
+        <div
+          class="border-b border-gray-600 flexborder-b"
+          :class="isRHB ? 'bg-rhb-blue-900' : ''"
+        >
           <p class="px-4 py-2 text-xs font-light text-gray-100">Task</p>
         </div>
         <p class="ml-4">////////////////////////////////////////</p>
         <div class="w-1/2 ml-4">
           <pre>{{ questionTitle }}</pre>
         </div>
-
+        <p class="ml-4">{{ description }}</p>
         <p class="ml-4">////////////////////////////////////////</p>
         <div
           class="px-4 py-3 font-mono text-tgray-400"
@@ -98,7 +116,10 @@
       <!-- code & output -->
       <div class="flex flex-col w-1/2 h-full">
         <!-- code header -->
-        <div class="border-t border-b border-gray-600 bg-tgray-800">
+        <div
+          class="border-t border-b border-gray-600"
+          :class="isRHB ? 'bg-rhb-blue-800' : 'bg-tgray-800'"
+        >
           <div
             class="inline-flex items-center px-3 py-2 text-xs font-light text-gray-100 border-r border-gray-600 "
           >
@@ -144,16 +165,23 @@
         <div class="text-xs text-gray-100 bg-tgray-800 h-1/2">
           <!-- output header -->
           <div
-            class="flex flex-row items-center justify-between px-3 py-1 text-xs font-light text-gray-100 border-t border-gray-600  bg-tgray-900"
+            class="flex flex-row items-center justify-between px-3 py-1 text-xs font-light text-gray-100 border-t border-gray-600 "
+            :class="isRHB ? 'bg-rhb-blue-800' : ''"
           >
             <p>Test Output</p>
             <button
               @click="testCode()"
-              class="inline-flex items-center px-2 py-1 border border-gray-600 rounded-md  hover:bg-tgray-800 focus:bg-tgray-800 focus:outline-none"
+              class="inline-flex items-center px-2 py-1 text-xs rounded-md  focus:outline-none"
+              :class="
+                isRHB
+                  ? 'bg-rhb-blue-200 text-rhb-blue-600 hover:bg-rhb-blue-300 focus:bg-rhb-blue-300'
+                  : 'text-gray-100 border border-tgray-600 hover:bg-tgray-800 focus:bg-tgray-800'
+              "
             >
               <svg
                 v-if="testStatus === 'running'"
-                class="w-5 h-5 mr-1 -ml-1 text-white animate-spin"
+                class="w-5 h-5 mr-1 -ml-1 animate-spin"
+                :class="isRHB ? '' : 'text-white'"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -332,10 +360,11 @@ import "prismjs/themes/prism-tomorrow.css"; // import syntax highlighting styles
 // import markdown parser
 import marked from "marked";
 
+// code formatter
 import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
 
-// import { art } from "ascii-art";
+// ascii art
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/Standard.js";
 import modular from "figlet/importable-fonts/Modular.js";
@@ -345,17 +374,10 @@ import ansiregular from "figlet/importable-fonts/ANSI Regular.js";
 import ansishadow from "figlet/importable-fonts/ANSI Shadow.js";
 import small from "figlet/importable-fonts/Small.js";
 
-// import VueSimpleMarkdown from "vue-simple-markdown/dist/vue-simple-markdown";
-// // You need a specific loader for CSS files like https://github.com/webpack/css-loader
-// import "vue-simple-markdown/dist/vue-simple-markdown.css";
-// // Vue.use(VueSimpleMarkdown)
-// import MarkDownData from "../data/arrays.md";
-
 export default {
   name: "ChallengePage",
   components: {
     Timer,
-    // VueSimpleMarkdown,
     PrismEditor,
   },
   data() {
@@ -376,15 +398,16 @@ export default {
       task: this.$route.query.task,
       code: code,
       expectedOutput: this.$route.query.expectedoutput,
+      description: this.$route.query.description,
     };
   },
   computed: {
     compiledMarkdown() {
       return this.task.replaceAll("\n", "<br>"); //marked(this.task)
     },
-    // questionTitle() {
-    //   return art.style(this.title, true);
-    // },
+    isRHB() {
+      return this.title.includes("RHB");
+    },
   },
   methods: {
     testCode() {
@@ -400,7 +423,10 @@ export default {
         try {
           eval(this.code);
 
-          if (this.expectedOutput === this.output) {
+          if (
+            this.expectedOutput === this.output ||
+            this.expectedOutput === this.output.toString()
+          ) {
             this.testResult = "success";
           } else {
             // if output does not match expected output
@@ -498,25 +524,6 @@ export default {
         that.questionTitle = data;
       }
     );
-    // figlet(
-    //   this.title,
-
-    //   (err, data) => {
-    //     if (err) {
-    //       console.error(err);
-    //     }
-
-    //     this.questionTitle = data;
-    //   }
-    // );
-
-    // const figlefyAPI = "http://figlefy.com/figlefy/";
-
-    // fetch(figlefyAPI + encodeURIComponent(this.title))
-    //   .then((res) => res.text())
-    //   .then((figlefied) => {
-    //     this.questionTitle = figlefied;
-    //   });
   },
 };
 </script>

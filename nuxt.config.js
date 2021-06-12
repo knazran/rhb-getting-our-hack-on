@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "rhb-crypto-app",
+    title: "Getting Our Hack On",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -72,11 +72,7 @@ export default {
 
   vite: {
     optimizeDeps: {
-      exclude: [
-        'vue-chartjs',
-        'chart.js',
-        'chart.esm.js'
-      ]
-    }
-  }
+      exclude: ["vue-chartjs", "chart.js", "chart.esm.js"],
+    },
+  },
 };
