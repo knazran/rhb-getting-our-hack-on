@@ -12,7 +12,10 @@
         <!-- Stats Card-->
         <div class="mb-8">
           <dl class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
+            <div
+              class="relative bg-white py-4 px-4 rounded-20 overflow-hidden"
+              style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+            >
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
                   <UsersIcon class="text-white" size="28"></UsersIcon>
@@ -30,7 +33,10 @@
                 </p>
               </dd>
             </div>
-            <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
+            <div
+              class="relative bg-white py-4 px-4 rounded-20 overflow-hidden"
+              style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+            >
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
                   <StarIcon class="text-white" size="28"></StarIcon>
@@ -49,7 +55,10 @@
                 </p>
               </dd>
             </div>
-            <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
+            <div
+              class="relative bg-white py-4 px-4 rounded-20 overflow-hidden"
+              style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+            >
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
                   <StarIcon class="text-white" size="28"></StarIcon>
@@ -72,7 +81,10 @@
 
         <!-- Charts -->
         <div class="grid grid-cols-2 gap-4 mb-8">
-          <div class="relative rounded-md shadow-md py-4 px-4 bg-white">
+          <div
+            class="relative rounded-20 py-4 px-4 bg-white"
+            style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+          >
             <!-- Header -->
             <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED CATEGORISE BY SKILL</h4>
             <h3 class="text-md uppercase font-semibold text-gray-900">Top Skill Set</h3>
@@ -81,9 +93,12 @@
               <DotsVerticalIcon class="h-6 w-6 text-gray-400 group-hover:text-gray-700"></DotsVerticalIcon>
             </div>
             <!-- Chart -->
-            <SkillSetBarChart/>
+            <SkillSetBarChart v-on:skill-bar-click="showFBSharing($event)" />
           </div>
-          <div class="relative rounded-md shadow-md py-4 px-4 bg-white">
+          <div
+            class="relative rounded-20 py-4 px-4 bg-white"
+            style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+          >
             <!-- Header -->
             <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED Over Time</h4>
             <div class="flex">
@@ -100,7 +115,44 @@
             </div>
 
             <!-- Chart -->
-            <ChallengeLineChart/>
+            <ChallengeLineChart />
+          </div>
+        </div>
+
+        <div
+          v-if="showFbSharing"
+          class="bg-white p-4 rounded-20 mb-4 w-1/2 border border-rhb-blue-500 border-opacity-60"
+          style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+        >
+          <h4 class="text-xs font-bold uppercase text-rhb-blue-800">Boost a Challenge</h4>
+          <h3 class="text-md uppercase font-semibold text-gray-900">Go</h3>
+          <div class="mb-4">
+            <div>
+              <h4 class="text-xs text-gray-600 mt-4">Targeted Group</h4>
+              <h3 class="text-sm font-semibold text-gray-900">KL Golang User Group</h3>
+            </div>
+
+            <div class="mb-4">
+              <h4 class="text-xs text-gray-600 mt-4">Caption</h4>
+              <h3
+                class="text-sm font-semibold text-gray-900"
+              >Are you up for the challenge? Get Your Hack On for Go programming language and flex your skills. Our recruiters might take note of your coding skills and contact you.</h3>
+            </div>
+          </div>
+
+          <div class="flex justify-end w-full mb-2 mt-12">
+            <ShareNetwork
+              class="bg-fb-blue text-white py-2 px-12 rounded text-sm"
+              network="facebook"
+              url="https://rhbgroup.is-hiring.com/jobcampaign/view/1002418"
+              title="Get Your Hack On! Challenges on Go are open!"
+              description="Are you up for the challenge? Get Your Hack On for Go programming language and flex your skills. Our recruiters might take note of your coding skills and contact you."
+              quote="Are you up for the challenge? Get Your Hack On for Go programming language and flex your skills. Our recruiters might take note of your coding skills and contact you."
+              hashtags="rhb,job,career,go,coding"
+            >Share on Facebook
+            </ShareNetwork>
+
+            <button @click="toggleFbSharing" class="text-gray-500 py-2 px-12 text-sm">Dismiss</button>
           </div>
         </div>
 
@@ -174,6 +226,10 @@
                           scope="col"
                           class="px-6 py-3 text-center text-sm font-bold text-gray-900 tracking-wider"
                         >Score</th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-center text-sm font-bold text-gray-900 tracking-wider"
+                        ></th>
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -204,6 +260,11 @@
                         <td
                           class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center"
                         >{{candidate.score}}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
+                          <button
+                            class="py-2 px-4 bg-rhb-blue-700 hover:bg-rhb-blue-800 text-white rounded-lg"
+                          >Share JD</button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -236,12 +297,22 @@ export default {
   },
   data() {
     return {
+      showFbSharing: false,
     };
   },
   computed: {
     candidateList() {
       return candidateConfigList["candidates"];
     },
+  },
+  methods: {
+    showFBSharing(value) {
+      console.log(value);
+      this.showFbSharing = true;
+    },
+    toggleFbSharing() {
+      this.showFbSharing = !this.showFbSharing;
+    }
   },
 };
 </script>

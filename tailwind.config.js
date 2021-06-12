@@ -12,6 +12,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderRadius: {
+        '20': '20px'
+      },
       colors: {
         tgray: colors.trueGray,
         "heavy-metal": {
@@ -40,6 +43,9 @@ module.exports = {
           '800': '#0067B1',
           '900': '#136073'
         },
+        'fb-blue': {
+          DEFAULT: '#1877f2'
+        }
       },
     },
   },

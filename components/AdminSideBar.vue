@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="sidebar-content py-6">
-      <ul class="flex flex-col w-full text-xl space-y-3">
+      <ul class="flex flex-col w-full text-lg space-y-3">
         <li class="my-px px-4 text-white hover:bg-white hover:text-rhb-blue-500">
           <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg">
             <HomeIcon class="flex items-center justify-center text-lg h-6 w-6"></HomeIcon>

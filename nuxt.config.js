@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "rhb-crypto-app",
+    title: "Getting Our Hack On",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -41,6 +41,7 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
+    "vue-social-sharing/nuxt"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -73,9 +74,7 @@ export default {
   vite: {
     optimizeDeps: {
       exclude: [
-        'vue-chartjs',
-        'chart.js',
-        'chart.esm.js'
+        'sdk.js'
       ]
     }
   }
