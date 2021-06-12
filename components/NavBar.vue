@@ -58,44 +58,45 @@
           </button>
         </div>
         <div
-          class="flex items-center justify-center flex-1  sm:items-stretch sm:justify-start"
+          class="flex items-center justify-center flex-1 space-x-4  sm:items-stretch sm:justify-start"
         >
-          <div class="flex items-center flex-shrink-0">
+          <div class="flex flex-col items-center flex-shrink-0">
             <!-- <img
               class="block w-auto h-8 lg:hidden"
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
               alt="Workflow"
-            />
+            />-->
             <img
-              class="hidden w-auto h-8 lg:block"
-              src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-              alt="Workflow"
-            /> -->
-            <h1
-              class="mr-8 font-mono text-2xl font-semibold text-transparent  bg-clip-text bg-gradient-to-r from-blue-300 to-green-200"
+              class="w-auto h-8"
+              src="~/static/icon.png"
+              alt="Getting our hack on"
+            />
+            <p class="text-xs text-center text-gray-300">Getting Our Hack On</p>
+            <!-- <h1
+              class="mr-8 font-mono text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-green-200"
             >
               Getting Our Hack On
-            </h1>
+            </h1> -->
           </div>
           <div class="hidden sm:block">
-            <div class="flex space-x-4">
+            <div class="flex items-center justify-center space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <NuxtLink
                 to="/"
-                class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md "
+                class="inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md "
                 aria-current="page"
                 >Challenges</NuxtLink
               >
 
               <NuxtLink
                 to="/accounts"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
+                class="inline-block px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
                 >Compete</NuxtLink
               >
 
               <a
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
+                class="inline-block px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
                 >Open Positions</a
               >
             </div>
