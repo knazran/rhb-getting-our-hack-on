@@ -25,7 +25,14 @@
         </p>
 
         <NuxtLink
-          :to="`/challenge?title=${challenge.title}&task=${challenge.task}&code=${challenge.code}&expectedoutput=${challenge.expectedOutput}`"
+          :to="`/challenge?title=${
+            challenge.title
+          }&task=${challenge.task.replaceAll(
+            '\n',
+            '%0D%0A'
+          )}&code=${challenge.code.replaceAll('\n', '%0D%0A')}&expectedoutput=${
+            challenge.expectedOutput
+          }`"
         >
           <button
             class="px-12 py-2 mt-8 mb-4 text-sm font-bold text-green-500 bg-white border border-green-500 rounded shadow-md  hover:bg-green-500 hover:text-white"
@@ -39,7 +46,7 @@
 </template>
 
 <script>
-import challengesConfigList from "~/data/challenges.json";
+import challengesConfigList from "~/data/challenges.js";
 
 export default {
   data() {
