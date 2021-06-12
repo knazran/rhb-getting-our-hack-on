@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col">
+  <main class="flex flex-col min-h-screen mx-auto max-w-screen-2xl">
     <!-- Header -->
     <div
       class="flex flex-row items-center justify-between px-10 py-4 bg-gray-900"
@@ -47,11 +47,16 @@
       <div
         v-for="challenge in challengeList"
         :key="challenge.key"
-        class="px-6 py-3 pr-2 bg-white shadow-lg"
+        class="px-6 py-3 pr-2 shadow-lg rounded-20"
+        :class="
+          challenge.categories[0].includes('RHB')
+            ? 'bg-rhb-blue-500'
+            : 'bg-tgray-700'
+        "
       >
         <template v-if="challenge.categories[0].includes('RHB')">
           <!-- <p class="flex space-x-1.5 text-xs font-light text-rhb-blue-700"> -->
-          <p class="text-base font-semibold text-right text-rhb-blue-500">
+          <p class="mr-2 text-base font-semibold text-right text-rhb-blue-100">
             {{ challenge.num_question }}
           </p>
           <h3
@@ -59,16 +64,19 @@
           >
             {{ challenge.title }}
           </h3>
-          <p class="text-sm font-light text-gray-500">
+          <p class="text-sm font-bold text-gray-100">
             {{ challenge.description }}
           </p>
           <p class="mt-2 space-x-2 text-sm font-light">
-            <span :class="difficultyStyle(challenge.difficulty)">
+            <span
+              :class="difficultyStyle(challenge.difficulty)"
+              class="font-medium rounded-full py-1 px-1.5"
+            >
               {{ challenge.difficulty }}
             </span>
             <span
               v-for="category in challenge.categories"
-              class="bg-blue-50 text-blue-600 rounded-full py-1 px-1.5"
+              class="bg-indigo-50 text-indigo-700 rounded-full py-1 px-1.5"
             >
               {{ category }}
             </span>
@@ -96,25 +104,33 @@
           </NuxtLink>
         </template>
         <template v-else>
-          <p class="text-xs font-light text-right text-gray-400">
+          <p class="mr-2 text-xs font-light text-right text-gray-400">
             {{ challenge.num_question }}
           </p>
-          <h3 class="my-2 text-2xl font-bold text-gray-800 tracking-relaxed">
+          <h3 class="my-2 text-2xl font-bold text-gray-200 tracking-relaxed">
             {{ challenge.title }}
           </h3>
-          <p class="text-sm font-light text-gray-500">
+          <p class="text-sm font-light text-gray-200">
             {{ challenge.description }}
           </p>
           <p class="mt-2 space-x-2 text-sm font-light">
-            <span :class="difficultyStyle(challenge.difficulty)">
-              {{ challenge.difficulty }}
-            </span>
+            <span
+              class="rounded-full py-1 px-1.5 font-medium"
+              :class="difficultyStyle(challenge.difficulty)"
+              >{{ challenge.difficulty }}</span
+            >
             <span
               v-for="category in challenge.categories"
-              class="bg-indigo-50 text-indigo-600 rounded-full py-1 px-1.5"
+              class="
+                bg-indigo-50
+                font-medium
+                text-indigo-700
+                rounded-full
+                py-1
+                px-1.5
+              "
+              >{{ category }}</span
             >
-              {{ category }}
-            </span>
           </p>
 
           <NuxtLink
@@ -131,7 +147,7 @@
             }`"
           >
             <button
-              class="px-12 py-2 mt-6 mb-4 text-sm font-bold text-green-500 bg-white border border-green-500 rounded shadow-md  hover:bg-green-500 hover:text-white"
+              class="px-12 py-2 mt-6 mb-4 text-sm font-bold bg-green-600 rounded shadow-md  text-green-50 hover:bg-green-800"
             >
               Take Challenge
             </button>
@@ -187,13 +203,13 @@ export default {
   methods: {
     difficultyStyle(difficulty) {
       if (difficulty === "Easy") {
-        return "text-green-500";
+        return "text-green-700 bg-green-50";
       } else if (difficulty === "Medium") {
-        return "text-yellow-500";
+        return "text-yellow-700 bg-yellow-50";
       } else if (difficulty === "Hard") {
-        return "text-red-500";
+        return "text-red-700 bg-red-50";
       } else {
-        return "text-gray-500";
+        return "text-gray-700 bg-gray-50";
       }
     },
   },

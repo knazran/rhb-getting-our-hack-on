@@ -36,7 +36,7 @@
     "vue-social-sharing": "^3.0.8"
   },
   "devDependencies": {
-    "@iconify/vue": "^1",
+    "@iconify/vue": "^1.0.6",
     "@nuxtjs/tailwindcss": "^4.0.1",
     "nuxt-vite": "^0.1.1",
     "postcss": "^8.2.8"
