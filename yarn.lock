@@ -5751,7 +5751,7 @@ lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -9307,6 +9307,13 @@ vue-chartjs@^3.5.1:
   integrity sha512-foocQbJ7FtveICxb4EV5QuVpo6d8CmZFmAopBppDIGKY+esJV8IJgwmEW0RexQhxqXaL/E1xNURsgFFYyKzS/g==
   dependencies:
     "@types/chart.js" "^2.7.55"
+
+vue-clickaway2@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/vue-clickaway2/-/vue-clickaway2-2.3.2.tgz#aa48988dd343c5fa1bb3612178bd9ce0400acec8"
+  integrity sha512-Zx8gAeTy5QNk9rROYk7NpnwL9gx0NBMmYokd7vylQ9c9DhPWaEV+0lsz75wXS5wjQ4xM+nzzGcGf/5/C1FZikA==
+  dependencies:
+    loose-envify "^1.2.0"
 
 vue-client-only@^2.0.0:
   version "2.1.0"

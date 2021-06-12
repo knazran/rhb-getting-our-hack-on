@@ -166,7 +166,7 @@
           <!-- output header -->
           <div
             class="flex flex-row items-center justify-between px-3 py-1 text-xs font-light text-gray-100 border-t border-gray-600 "
-            :class="isRHB ? 'bg-rhb-blue-800' : ''"
+            :class="isRHB ? 'bg-rhb-blue-800' : 'bg-tgray-900 border-b'"
           >
             <p>Test Output</p>
             <button

@@ -1,24 +1,27 @@
 <template>
-  <nav class="mt-4">
-    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="relative h-16 flex items-center justify-between">
+  <nav class="mt-8">
+    <div class="w-full px-4 mx-auto sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <h1 class="text-2xl font-semibold uppercase tracking-wide">This Month Overview</h1>
-            <div class="my-1 h-1 w-24 bg-rhb-blue-500"></div>
+            <h1 class="text-3xl font-semibold tracking-wide uppercase">
+              This Month Overview
+            </h1>
+            <div class="w-24 h-1 mt-3 bg-rhb-blue-500"></div>
           </div>
 
           <!-- Links section -->
           <div class="hidden lg:block lg:ml-10"></div>
         </div>
 
-        <div class="flex-1 px-2 flex justify-center lg:ml-6 lg:justify-end">
-        </div>
+        <div
+          class="flex justify-center flex-1 px-2 lg:ml-6 lg:justify-end"
+        ></div>
         <div class="flex lg:hidden">
           <!-- Mobile menu button -->
           <button
             type="button"
-            class="bg-gray-50 p-2 inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500"
+            class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md  bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -28,7 +31,7 @@
               Menu open: "hidden", Menu closed: "block"
             -->
             <svg
-              class="block h-6 w-6"
+              class="block w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -47,7 +50,7 @@
               Menu open: "block", Menu closed: "hidden"
             -->
             <svg
-              class="hidden h-6 w-6"
+              class="hidden w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -68,12 +71,12 @@
         <div class="hidden lg:block lg:ml-4">
           <div class="flex items-center">
             <button
-              class="flex-shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none"
+              class="flex-shrink-0 p-1 text-gray-400 rounded-full  hover:text-gray-500 focus:outline-none"
             >
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg
-                class="h-6 w-6"
+                class="w-10 h-10"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -90,23 +93,25 @@
             </button>
 
             <!-- Profile dropdown -->
-            <div class="ml-3 relative flex-shrink-0">
+            <div class="relative flex-shrink-0 ml-3">
               <div>
                 <button
                   type="button"
-                  class="bg-gray-50 rounded-full flex text-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500"
+                  class="flex text-sm text-white rounded-full  bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-rhb-blue-500"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
                   <span class="sr-only">Open user menu</span>
                   <img
-                    class="rounded-full h-8 w-8"
-                    src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt
+                    class="rounded-full w-14 h-14"
+                    src="~/assets/suba.jpeg"
+                    alt="Suba's profile photo."
                   />
                 </button>
               </div>
+
+              <!-- src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" -->
 
               <!--
                 Dropdown menu, show/hide based on menu state.
@@ -118,7 +123,7 @@
                   To: "transform opacity-0 scale-95"
               -->
               <!-- <div
-                    class="origin-top-right absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    class="absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="user-menu-button"
@@ -126,7 +131,7 @@
                   >
                     <a
                       href="#"
-                      class="block py-2 px-4 text-sm text-gray-700"
+                      class="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-0"
@@ -134,7 +139,7 @@
 
                     <a
                       href="#"
-                      class="block py-2 px-4 text-sm text-gray-700"
+                      class="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-1"
@@ -142,7 +147,7 @@
 
                     <a
                       href="#"
-                      class="block py-2 px-4 text-sm text-gray-700"
+                      class="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-2"
@@ -155,50 +160,58 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="bg-gray-50 border-b border-gray-200 lg:hidden" id="mobile-menu">
+    <div class="border-b border-gray-200 bg-gray-50 lg:hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <!-- Current: "bg-gray-100", Default: "hover:bg-gray-100" -->
         <a
           href="#"
-          class="bg-gray-100 block px-3 py-2 rounded-md font-medium text-gray-900"
+          class="block px-3 py-2 font-medium text-gray-900 bg-gray-100 rounded-md "
           aria-current="page"
-        >Dashboard</a>
+          >Dashboard</a
+        >
 
         <a
           href="#"
-          class="hover:bg-gray-100 block px-3 py-2 rounded-md font-medium text-gray-900"
-        >Jobs</a>
+          class="block px-3 py-2 font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+          >Jobs</a
+        >
 
         <a
           href="#"
-          class="hover:bg-gray-100 block px-3 py-2 rounded-md font-medium text-gray-900"
-        >Applicants</a>
+          class="block px-3 py-2 font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+          >Applicants</a
+        >
 
         <a
           href="#"
-          class="hover:bg-gray-100 block px-3 py-2 rounded-md font-medium text-gray-900"
-        >Company</a>
+          class="block px-3 py-2 font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+          >Company</a
+        >
       </div>
       <div class="pt-4 pb-3 border-t border-gray-200">
-        <div class="px-5 flex items-center">
+        <div class="flex items-center px-5">
           <div class="flex-shrink-0">
             <img
-              class="rounded-full h-10 w-10"
+              class="w-10 h-10 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt
             />
           </div>
           <div class="ml-3">
-            <div class="text-base font-medium text-gray-800">Whitney Francis</div>
-            <div class="text-sm font-medium text-gray-500">whitneyfrancis@example.com</div>
+            <div class="text-base font-medium text-gray-800">
+              Whitney Francis
+            </div>
+            <div class="text-sm font-medium text-gray-500">
+              whitneyfrancis@example.com
+            </div>
           </div>
           <button
-            class="ml-auto bg-gray-50 flex-shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500"
+            class="flex-shrink-0 p-1 ml-auto text-gray-400 rounded-full  bg-gray-50 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-purple-500"
           >
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -214,21 +227,24 @@
             </svg>
           </button>
         </div>
-        <div class="mt-3 px-2 space-y-1">
+        <div class="px-2 mt-3 space-y-1">
           <a
             href="#"
-            class="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >Your Profile</a>
+            class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+            >Your Profile</a
+          >
 
           <a
             href="#"
-            class="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >Settings</a>
+            class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+            >Settings</a
+          >
 
           <a
             href="#"
-            class="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >Sign out</a>
+            class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md  hover:bg-gray-100"
+            >Sign out</a
+          >
         </div>
       </div>
     </div>
