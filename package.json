@@ -9,6 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@iconify-icons/cib": "^1.1.0",
+    "@iconify/icons-ant-design": "^1.1.0",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/forms": "^0.3.3",
@@ -30,6 +35,7 @@
     "vue-social-sharing": "^3.0.8"
   },
   "devDependencies": {
+    "@iconify/vue": "^1",
     "@nuxtjs/tailwindcss": "^4.0.1",
     "nuxt-vite": "^0.1.1",
     "postcss": "^8.2.8"

@@ -1,8 +1,9 @@
 <template>
   <div
     class="relative rounded-20 py-3 pr-4 pl-6 bg-midnight-blue h-full w-full"
-    style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+    
     >
+    <!-- style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);" -->
     <!-- Header -->
     <span class="text-md font-semibold text-white">Node.js:</span> <span class='font-semibold text-green-300 text-md'>Proficient</span>
     <h4 class="text-xs text-gray-400">Verified: 10 December 2018</h4>

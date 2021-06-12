@@ -3,68 +3,63 @@
     <div class="container mx-auto p-10">
       <!-- Header -->
       <div class="flex-shrink-0">
-        <h1 class="text-2xl font-semibold tracking-wide ">Profile</h1>
+        <h1 class="text-2xl font-semibold tracking-wide">Profile</h1>
         <div class="my-1 h-1 w-24 bg-rhb-blue-500"></div>
       </div>
 
-      
       <div class="flex my-6 text-white items-stretch">
         <!-- View One -->
-        <div class="w-3/12 rounded-md px-4 xl:px-12">
-          <ProfileCard/>
+        <div class="w-3/12 rounded-md px-4">
+          <ProfileCard />
         </div>
 
         <!-- View Two -->
         <div class="w-9/12 rounded-md px-4">
-          <SkillReportCard/>
-          
+          <SkillReportCard />
+        </div>
+      </div>
+      <div class='flex justify-end py-2 '>
+        <div class='flex space-x-6 align-baseline mr-6'>
+          <p class='text-white text-sm mr-4'>Share your Skill IQ!</p>
+        <IconifyIcon :icon="icons.twitter" height="24" />
+        <IconifyIcon :icon="icons.linkedin" height="24" />
+        <IconifyIcon :icon="icons.stackOverflow" height="22" />
         </div>
         
+
+        <!-- <NuxtLink to="/hiring-dashboard">
+        <button class="py-1 px-8 rounded-md border border-white text-white text-sm">See How Pro</button>
+      </NuxtLink> -->
       </div>
-      <NuxtLink
-            to="/hiring-dashboard"
-          >
-            <button class='py-1 px-8 rounded-md border border-white text-white text-sm'>See How Pro</button>
-          </NuxtLink>
+      
     </div>
 
-    <section class="p-10 container mx-auto">
+    <section class="px-10 py-4 container mx-auto">
       <div class="flex-shrink-0 mb-6">
-        <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">
-          Challenge Details
-        </h1>
+        <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">Challenge Details</h1>
         <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
       </div>
 
       <div class="flex space-x-2">
         <div
-          class="grid w-full grid-cols-3 gap-4 p-5 border-2 shadow-2xl  border-tgray-800 bg-tgray-900 rounded-2xl hover:border-2 hover:border-rhb-blue-500"
-          style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+          class="grid w-full grid-cols-3 gap-4 p-5 py-8 border-2 shadow-2xl border-tgray-800 bg-tgray-900 rounded-2xl hover:border-2 hover:border-rhb-blue-500"
         >
           <div class="flex justify-around col-span-1">
             <div class="flex flex-col justify-between">
               <div>
-                <p class="text-base font-light text-gray-400">
-                  Good job! You did better than
-                </p>
-                <p class="text-base font-bold text-gray-200">
-                  24% of your peers
-                </p>
+                <p class="text-base font-light text-gray-400">Good job! You did better than</p>
+                <p class="text-base font-bold text-gray-200">24% of your peers</p>
               </div>
 
               <div>
-                <p class="mb-4 text-base font-bold text-gray-200">
-                  Keep going:
-                </p>
+                <p class="mb-4 text-base font-bold text-gray-200">Keep going:</p>
                 <NuxtLink
                   to="/"
-                  class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-                >
-                  MORE CHALLENGE
-                </NuxtLink>
+                  class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+                >MORE CHALLENGE</NuxtLink>
               </div>
 
-              <div>
+              <div class="mb-12">
                 <div class="w-full h-1 my-1 bg-rhb-blue-500"></div>
                 <p class="text-base font-light text-gray-400">
                   <span class="underline">Review</span> your solutions
@@ -77,7 +72,7 @@
           <div class="flex flex-col w-full col-span-2">
             <div>
               <h2
-                class="flex items-center space-x-2 text-3xl font-bold  text-tgray-200 tracking-relaxed"
+                class="flex items-center space-x-2 text-3xl font-bold text-tgray-200 tracking-relaxed"
               >
                 <span>Personalised Skill Analysis</span>
                 <svg
@@ -95,19 +90,13 @@
                   />
                 </svg>
               </h2>
-              <p class="mb-8 text-base font-light text-gray-400">
-                Based on 12 challenges taken
-              </p>
+              <p class="mb-8 text-base font-light text-gray-400">Based on 12 challenges taken</p>
             </div>
 
-            <div class="grid w-full grid-cols-2 gap-8">
+            <div class="grid w-full grid-cols-2 gap-8 mb-16">
               <div>
                 <div class="w-4/5 h-1 my-1 bg-green-500"></div>
-                <h3
-                  class="mb-4 text-2xl font-bold  text-tgray-200 tracking-relaxed"
-                >
-                  Your strengths
-                </h3>
+                <h3 class="mb-4 text-2xl font-bold text-tgray-200 tracking-relaxed">Your strengths</h3>
 
                 <div class="flex flex-col space-y-2">
                   <p class="text-base text-gray-400">Concurrency</p>
@@ -118,11 +107,7 @@
 
               <div>
                 <div class="w-4/5 h-1 my-1 bg-red-500"></div>
-                <h3
-                  class="mb-4 text-2xl font-bold  text-tgray-200 tracking-relaxed"
-                >
-                  Your gaps
-                </h3>
+                <h3 class="mb-4 text-2xl font-bold text-tgray-200 tracking-relaxed">Your gaps</h3>
 
                 <div class="flex flex-col space-y-2">
                   <p class="text-base text-gray-400">CLI, REPL and Globals</p>
@@ -140,20 +125,16 @@
     <section class="p-10 container mx-auto">
       <div class="flex flex-row items-center justify-between mb-6">
         <div class="flex-shrink-0">
-          <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">
-            Job Opening
-          </h1>
+          <h1 class="text-2xl font-semibold tracking-wide text-rhb-blue-300">Job Opening</h1>
           <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
         </div>
         <div class="flex items-center justify-between space-x-4">
           <span class="flex flex-col flex-grow" id="availability-label">
-            <span class="text-base font-medium text-gray-300"
-              >Open for employment?</span
-            >
+            <span class="text-base font-medium text-gray-300">Open for employment?</span>
           </span>
           <button
             type="button"
-            class="relative inline-flex flex-shrink-0 h-6 transition-colors duration-200 ease-in-out border-2 border-transparent rounded-full cursor-pointer  w-11 focus:outline-none"
+            class="relative inline-flex flex-shrink-0 h-6 transition-colors duration-200 ease-in-out border-2 border-transparent rounded-full cursor-pointer w-11 focus:outline-none"
             :class="isEnabled ? 'bg-green-600' : 'bg-gray-600'"
             role="switch"
             aria-checked="false"
@@ -163,36 +144,33 @@
             <span class="sr-only">Toggle employment offers</span>
             <span
               aria-hidden="true"
-              class="inline-block w-5 h-5 transition duration-200 ease-in-out transform bg-gray-300 rounded-full shadow pointer-events-none  ring-0"
+              class="inline-block w-5 h-5 transition duration-200 ease-in-out transform bg-gray-300 rounded-full shadow pointer-events-none ring-0"
               :class="isEnabled ? 'translate-x-5' : 'translate-x-0'"
             ></span>
           </button>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid grid-cols-3 gap-8">
         <div
           v-for="job in jobs"
           :key="job.key"
-          class="p-5 border-2 shadow-2xl  bg-tgray-900 rounded-2xl border-tgray-800 hover:border-2 hover:border-rhb-blue-500"
-          style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
+          class="p-4 border-2 shadow-2xl bg-tgray-900 rounded-20 border-tgray-800 hover:border-2 hover:border-rhb-blue-500"
         >
-          <p class="text-base text-right text-tgray-400">
-            {{ job.date }}
-          </p>
-          <h2 class="text-3xl font-bold text-tgray-200 tracking-relaxed">
-            {{ job.title }}
-          </h2>
-          <p class="mb-8 text-sm font-light text-gray-400">
-            {{ job.description }}
-          </p>
+          <div class="flex">
+            <div class="w-4/5">
+              <h2 class="mt-6 text-2xl font-bold text-tgray-200 tracking-relaxed">{{ job.title }}</h2>
+              <p class="mb-8 text-sm font-light text-gray-400">{{ job.description }}</p>
+            </div>
+            <div class="w-1/5">
+              <p class="text-sm text-right text-tgray-400">{{ job.date }}</p>
+            </div>
+          </div>
 
           <NuxtLink
             to="/"
-            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-          >
-            APPLY
-          </NuxtLink>
+            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+          >APPLY</NuxtLink>
         </div>
       </div>
     </section>
@@ -200,18 +178,28 @@
 </template>
 
 <script>
-import SkillReportCard from '~/components/SkillReportCard.vue';
+import SkillReportCard from "~/components/SkillReportCard.vue";
+import IconifyIcon from "@iconify/vue";
+import twitterOutlined from '@iconify/icons-ant-design/twitter-outlined'
+import linkedinFilled from "@iconify/icons-ant-design/linkedin-filled";
+import stackoverflowIcon from '@iconify-icons/cib/stackoverflow';
+
 import jobs from "~/data/jobs.json";
 
 export default {
-  components: { SkillReportCard },
+  components: { SkillReportCard, IconifyIcon },
   data() {
     return {
       jobs,
       isEnabled: false,
+      icons: {
+        twitter: twitterOutlined,
+        linkedin: linkedinFilled,
+        stackOverflow: stackoverflowIcon
+      },
     };
   },
-  };
+};
 </script>
 
 <style scoped></style>

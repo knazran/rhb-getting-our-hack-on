@@ -18,50 +18,81 @@ export default {
           containLabel: true,
         },
         tooltip: {
-          show: true,
+          show: false,
           trigger: "item",
         },
         visualMap: {
           show: false,
+          dimension: 0,
           pieces: [
             {
-              lte: 100,
+              max: 2,
               color: "#fff6d9",
             },
             {
-              gt: 100,
-              lte: 200,
+              min: 2,
+              max: 5,
               color: "#9ad74a",
             },
             {
-              gt: 200,
+              min: 5,
               color: "#40c8fb",
-            }
+            },
           ],
         },
         xAxis: {
-          data: ["2/5", "9/5", "16/5", "23/5", "30/5", "6/6", "13/6"],
+          data: ["2/5", "8/5", "9/5","16/5", "23/5", "30/5", "6/6", "13/6"],
           show: false,
           color: "#fffff",
-          scale: true,
+        //   scale: true,
         },
         yAxis: {
           type: "value",
-          scale: true,
-          show: true
+        //   scale: true,
+          show: true,
         },
         series: [
           {
-            data: [0, 70, 109, 130, 150, 180, 300],
+            data: [0, 70, 100, 109, 130, 150, 180, 300],
             type: "line",
             smooth: true,
+            areaStyle: {},
+            markPoint: {
+              symbolSize: 30,
+              data: [
+                {
+                  value: "Skill IQ\n109",
+                  coord: [3, 109],
+                  symbol: "circle",
+                  label: {
+                    position: "top",
+                    show: true,
+                    color: "#FFFFFF",
+                    fontSize: 16,
+                    lineHeight: 24,
+                  },
+                  itemStyle: {
+                    color: "#9ad74a",
+                  },
+                },
+              ],
+            },
           },
+        //   {
+        //         data: [0, 70, 109, 130, 150, 180, 300],
+        //         type: 'line',
+        //         smooth: true,
+        //         areaStyle: {}
+        //     }
         ],
       },
     };
   },
   mounted() {
-    var myChart = echarts.init(document.getElementById("skill-report-chart"), 'dark');
+    var myChart = echarts.init(
+      document.getElementById("skill-report-chart"),
+      "dark"
+    );
     myChart.setOption(this.option);
   },
 };
