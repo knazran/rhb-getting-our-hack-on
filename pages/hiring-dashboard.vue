@@ -72,7 +72,7 @@
 
         <!-- Charts -->
         <div class="grid grid-cols-2 gap-4 mb-8">
-          <div class="relative rounded-md shadow-md py-4 px-4 h-64 bg-white">
+          <div class="relative rounded-md shadow-md py-4 px-4 bg-white">
             <!-- Header -->
             <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED CATEGORISE BY SKILL</h4>
             <h3 class="text-md uppercase font-semibold text-gray-900">Top Skill Set</h3>
