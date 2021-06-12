@@ -27,18 +27,18 @@ module.exports = {
           800: "#000000",
           900: "#000000",
         },
-        'rhb-blue': {
-          DEFAULT: '#6CCEE6',
-          '50': '#fafafa',
-          '100': '#FFFFFF',
-          '200': '#EFFAFC',
-          '300': '#e5f3f7',
-          '400': '#98DDED',
-          '500': '#6CCEE6',
-          '600': '#0067B1',
-          '700': '#22A9CA',
-          '800': '#0067B1',
-          '900': '#136073'
+        "rhb-blue": {
+          DEFAULT: "#6CCEE6",
+          50: "#fafafa",
+          100: "#FFFFFF",
+          200: "#EFFAFC",
+          300: "#e5f3f7",
+          400: "#98DDED",
+          500: "#6CCEE6",
+          600: "#0067B1",
+          700: "#22A9CA",
+          800: "#0067B1",
+          900: "#136073",
         },
       },
     },
@@ -46,5 +46,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

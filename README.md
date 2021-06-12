@@ -1,4 +1,4 @@
-# rhb-crypto-app
+# Getting Our Hack On
 
 ## Build Setup
 
