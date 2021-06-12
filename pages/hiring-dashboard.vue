@@ -17,14 +17,14 @@
             <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
-                  <UsersIcon class="text-white" size="32"></UsersIcon>
+                  <UsersIcon class="text-white" size="28"></UsersIcon>
                 </div>
                 <p
                   class="ml-16 text-sm font-bold uppercase text-black truncate tracking-tight"
                 >Total Talent</p>
               </dt>
               <dd class="ml-16 flex items-baseline">
-                <p class="text-2xl text-gray-800 tracking-wider">1,361</p>
+                <p class="text-xl text-gray-800 tracking-wider">1,361</p>
                 <p class="ml-2 flex items-baseline text-sm font-semibold text-green-600">
                   <ArrowUpIcon class="h-5 w-5 self-center flex-shrink-0 text-green-600"></ArrowUpIcon>
                   <span class="sr-only">Increased by</span>
@@ -35,14 +35,14 @@
             <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
-                  <StarIcon class="text-white" size="32"></StarIcon>
+                  <StarIcon class="text-white" size="28"></StarIcon>
                 </div>
                 <p
                   class="ml-16 text-sm font-bold uppercase text-black truncate tracking-tight"
                 >Hot Talent</p>
               </dt>
               <dd class="ml-16 flex items-baseline">
-                <p class="text-2xl text-gray-800 tracking-wider">80</p>
+                <p class="text-xl text-gray-800 tracking-wider">80</p>
                 <p class="ml-2 flex items-baseline text-sm font-semibold text-red-600">
                   <!-- Heroicon name: solid/arrow-sm-up -->
                   <ArrowDownIcon class="h-5 w-5 self-center flex-shrink-0 text-red-600"></ArrowDownIcon>
@@ -54,14 +54,14 @@
             <div class="relative bg-white py-4 px-4 shadow rounded-lg overflow-hidden">
               <dt>
                 <div class="absolute bg-rhb-blue-800 rounded-md p-3">
-                  <StarIcon class="text-white" size="32"></StarIcon>
+                  <StarIcon class="text-white" size="28"></StarIcon>
                 </div>
                 <p
                   class="ml-16 text-sm font-bold uppercase text-black truncate tracking-tight"
                 >Something Else</p>
               </dt>
               <dd class="ml-16 flex items-baseline">
-                <p class="text-2xl text-gray-800 tracking-wider">30</p>
+                <p class="text-xl text-gray-800 tracking-wider">30</p>
                 <p class="ml-2 flex items-baseline text-sm font-semibold text-green-600">
                   <ArrowUpIcon class="h-5 w-5 self-center flex-shrink-0 text-green-600"></ArrowUpIcon>
                   <span class="sr-only">Increased by</span>
@@ -85,8 +85,8 @@
           </div>
           <div class='relative rounded-md shadow-md py-4 px-4 h-64 bg-white'>
             <!-- Header -->
-            <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED CATEGORISE BY SKILL</h4>
-            <h3 class="text-md uppercase font-semibold text-gray-900">Top Skill Set</h3>
+            <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED Over Time</h4>
+            <h3 class="text-md uppercase font-semibold text-gray-900">Challenge Trend</h3>
             <div class='absolute inset-y-1 right-0 p-2'>
               <!-- Heroicon name: solid/chevron-right -->
               <DotsVerticalIcon class="h-6 w-6 text-gray-400 group-hover:text-gray-700"></DotsVerticalIcon>
@@ -97,7 +97,41 @@
         <!-- Candidate Table List -->
         <div class="max-w-7xl mx-auto">
           <div class="px-4 sm:px-0">
-            <h2 class="text-lg font-medium text-gray-900">Candidates</h2>
+            <div class="relative">
+              <h1 class="text-2xl font-semibold uppercase tracking-wide">Talent</h1>
+              <div class="my-1 h-1 w-24 bg-rhb-blue-500"></div>
+
+               <div class="absolute right-0 inset-y-0 max-w-lg w-full lg:w-1/4">
+                <label for="search" class="sr-only">Search</label>
+                <div class="relative text-gray-400 focus-within:text-gray-500">
+                  
+                  <input
+                    id="search"
+                    class="block w-full bg-rhb-blue-300 py-2 pl-4 rounded-full leading-5 text-gray-600 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-rhb-blue-700 focus:border-rhb-blue-700 focus:placeholder-gray-500 sm:text-xs"
+                    placeholder="Search Talents"
+                    autocomplete="off"
+                    type="search"
+                    name="search"
+                  />
+                  <div class="pointer-events-none absolute inset-y-0 right-0 pr-3 flex items-center">
+                    <svg
+                      class="h-5 w-5 text-rhb-blue-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+          </div>
+            </div>
+            
 
             <!-- Tabs -->
             <div class="sm:hidden">
