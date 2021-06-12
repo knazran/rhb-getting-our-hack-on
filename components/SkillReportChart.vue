@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       option: {
+          backgroundColor: "#404040",
         grid: {
           left: "3%",
           right: "4%",
@@ -57,6 +58,9 @@ export default {
             type: "line",
             smooth: true,
             areaStyle: {},
+            lineStyle: {
+      width: 5
+    },
             markPoint: {
               symbolSize: 30,
               data: [
@@ -90,8 +94,7 @@ export default {
   },
   mounted() {
     var myChart = echarts.init(
-      document.getElementById("skill-report-chart"),
-      "dark"
+      document.getElementById("skill-report-chart")
     );
     myChart.setOption(this.option);
   },

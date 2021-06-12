@@ -9,7 +9,7 @@
 
       <div class="flex my-6 text-white items-stretch">
         <!-- View One -->
-        <div class="w-3/12 rounded-md px-4">
+        <div class="w-3/12 rounded-md px-4 2xl:px-8">
           <ProfileCard />
         </div>
 
@@ -42,7 +42,7 @@
 
       <div class="flex space-x-2">
         <div
-          class="grid w-full grid-cols-3 gap-4 p-5 py-8 border-2 shadow-2xl border-tgray-800 bg-tgray-900 rounded-2xl hover:border-2 hover:border-rhb-blue-500"
+          class="grid w-full grid-cols-3 gap-4 p-5 py-8 border-2 shadow-2xl border-tgray-800 bg-tgray-700 rounded-2xl hover:border-2 hover:border-rhb-blue-500"
         >
           <div class="flex justify-around col-span-1">
             <div class="flex flex-col justify-between">
@@ -155,7 +155,7 @@
         <div
           v-for="job in jobs"
           :key="job.key"
-          class="p-4 border-2 shadow-2xl bg-tgray-900 rounded-20 border-tgray-800 hover:border-2 hover:border-rhb-blue-500"
+          class="p-4 border-2 shadow-2xl bg-tgray-700 rounded-20 border-tgray-800 hover:border-2 hover:border-rhb-blue-500"
         >
           <div class="flex">
             <div class="w-4/5">

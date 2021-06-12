@@ -2,6 +2,7 @@
   <div
     class="rounded-20 flex flex-col justify-between h-full bg-opacity-20"
     :style="{ backgroundImage: `url(${bgImage})`}"
+    style="background-size: 100% 100%;"
   >
     <!-- style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2); background-size: 100% 100%;"  -->
     <div class="flex flex-col items-center py-8">
