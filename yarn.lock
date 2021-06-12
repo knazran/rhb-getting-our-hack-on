@@ -965,7 +965,7 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-ant-design/-/icons-ant-design-1.1.0.tgz#013574b09d8dd167490e6fd6dd0b2805d7170854"
   integrity sha512-sE4NKXMfN9arTFmfvt4zARoS+hjhd8P0z5osjWYxVkQPCri1RYpF+NRa9MsDh3ScqAcSU9wfUeQ3X4Gf8GrcNQ==
 
-"@iconify/vue@^1":
+"@iconify/vue@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-1.0.6.tgz#e15c36305b55ca92f51dd514f784ac926bfd6fe7"
   integrity sha512-hqzfDXN9sEkes1bDzLPbQchOVACMPB5lwGHkk7StD4PuWLXZjgmLKybhLgsssCjWpHTHzE47dmZvB240eLZlYw==
