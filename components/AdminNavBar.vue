@@ -1,6 +1,6 @@
 <template>
   <nav class="mt-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative h-16 flex items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
