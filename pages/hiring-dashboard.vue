@@ -1,5 +1,6 @@
 <template>
   <main class="px-8 pb-16 mt-4">
+    <AdminNavBar title="This Month Overview"/>
     <!-- Stats Card-->
     <div class="mb-8">
       <dl class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

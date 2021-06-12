@@ -25,10 +25,6 @@
           <IconifyIcon :icon="icons.linkedin" height="24" />
           <IconifyIcon :icon="icons.stackOverflow" height="22" />
         </div>
-
-        <!-- <NuxtLink to="/hiring-dashboard">
-        <button class="px-8 py-1 text-sm text-white border border-white rounded-md">See How Pro</button>
-      </NuxtLink> -->
       </div>
     </div>
 

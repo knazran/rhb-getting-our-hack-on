@@ -1,5 +1,21 @@
 <template>
-  <main class="flex flex-col min-h-screen bg-white">
+  <main class="flex flex-col min-h-screen">
+    <AdminNavBar title="Candidate Profile"/>
+    <div class="container p-10 mx-auto">
+
+      <div class="flex items-stretch my-6 text-white">
+        <!-- View One -->
+        <div class="w-3/12 px-4 rounded-20 2xl:px-8">
+          <ProfileCard mode='dark'/>
+        </div>
+
+        <!-- View Two -->
+        <div class="w-9/12 px-4 rounded-20 bg-white" style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
+        >
+          <SkillReportCard mode='light'/>
+        </div>
+      </div>
+    </div>
     <!-- light mode candidate assessment -->
     <section class="p-10">
       <div class="flex-shrink-0 mb-6">
@@ -10,7 +26,8 @@
       </div>
 
       <div
-        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white border-2 border-gray-100 shadow-2xl  rounded-2xl hover:border-2 hover:border-rhb-blue-500"
+        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white rounded-20 hover:border-2 hover:border-rhb-blue-500"
+        style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
       >
         <div class="flex justify-around col-span-1">
           <div class="flex flex-col justify-between">
@@ -33,7 +50,7 @@
               </NuxtLink>
             </div>
 
-            <div>
+            <div class="mb-12">
               <div class="w-full h-1 my-1 bg-rhb-blue-500"></div>
               <p class="text-base font-light text-gray-500">
                 <span class="underline">Review</span> Tien's solutions
@@ -74,7 +91,7 @@
             >
           </div>
 
-          <div class="grid w-full grid-cols-2 gap-8">
+          <div class="grid w-full grid-cols-2 gap-8 mb-16">
             <div>
               <div class="w-4/5 h-1 my-1 bg-green-500"></div>
               <h3
@@ -122,15 +139,21 @@
           :key="role.key"
           class="p-5 bg-white border-2 border-gray-100 shadow-2xl  rounded-2xl hover:border-2 hover:border-rhb-blue-500"
         >
-          <p class="text-base text-right text-tgray-500">
-            {{ role.date }}
-          </p>
-          <h2 class="text-3xl font-bold text-tgray-800 tracking-relaxed">
-            {{ role.title }}
-          </h2>
-          <p class="mb-8 text-sm font-light text-gray-500">
-            {{ role.description }}
-          </p>
+          <div class="flex">
+            <div class="w-4/5">
+              <h2
+                class="mt-6 text-2xl font-bold text-tgray-800 tracking-relaxed"
+              >
+                {{ role.title }}
+              </h2>
+              <p class="mb-8 text-sm font-light text-gray-500">
+                {{ role.description }}
+              </p>
+            </div>
+            <div class="w-1/5">
+              <p class="text-sm text-right text-tgray-500">{{ role.date }}</p>
+            </div>
+          </div>
 
           <div class="flex mb-4 space-x-2">
             <span

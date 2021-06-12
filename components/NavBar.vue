@@ -76,7 +76,7 @@
             sm:items-stretch sm:justify-start
           "
         >
-          <div class="flex flex-col items-center flex-shrink-0">
+          <NuxtLink to='/' class="flex flex-col items-center flex-shrink-0">
             <!-- <img
               class="block w-auto h-8 lg:hidden"
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -93,7 +93,7 @@
             >
               Getting Our Hack On
             </h1> -->
-          </div>
+          </NuxtLink>
           <div class="hidden sm:block">
             <div class="flex items-center justify-center space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->

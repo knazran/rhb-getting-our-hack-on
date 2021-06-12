@@ -5,7 +5,7 @@
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <h1 class="text-3xl font-semibold tracking-wide uppercase">
-              This Month Overview
+              {{ title }}
             </h1>
             <div class="w-24 h-1 mt-3 bg-rhb-blue-500"></div>
           </div>
@@ -252,5 +252,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: {
+      required: true
+    }
+  }
+};
 </script>
