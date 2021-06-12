@@ -1,46 +1,20 @@
 <template>
   <div id='skillset-chart' class="chart">
-    <!-- <v-chart id='skillset-chart' class="chart" :option="option" /> -->
   </div>
 </template>
 
 <script>
-// import { use } from "echarts/core";
-// import { CanvasRenderer } from "echarts/renderers";
-// import { BarChart } from "echarts/charts";
-// import {
-//   TitleComponent,
-//   TooltipComponent,
-//   LegendComponent,
-//   GridComponent
-// } from "echarts/components";
-// import VChart, { THEME_KEY } from "vue-echarts";
-
-// use([
-//   CanvasRenderer,
-//   BarChart,
-//   GridComponent,
-//   TitleComponent,
-//   TooltipComponent,
-//   LegendComponent
-// ]);
 
 import * as echarts from 'echarts';
 
 export default {
   name: "SkillSetBarChart",
-  // components: {
-  //   VChart
-  // },
-  // provide: {
-  //   [THEME_KEY]: "light"
-  // },
   data() {
     return {
       option: {
         xAxis: {
             data: ['Vue', 'React', 'Python', 'Go', 'Node', 'AWS'],
-            splitLine:{//remove grid lines
+            splitLine:{ //remove grid lines
                 lineStyle: {
                 type: "dashed"
               }

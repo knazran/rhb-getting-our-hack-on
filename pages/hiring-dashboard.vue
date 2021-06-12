@@ -83,7 +83,7 @@
             <!-- Chart -->
             <SkillSetBarChart/>
           </div>
-          <div class="relative rounded-md shadow-md py-4 px-4 h-64 bg-white">
+          <div class="relative rounded-md shadow-md py-4 px-4 bg-white">
             <!-- Header -->
             <h4 class="text-xs uppercase text-gray-400">CHALLENGE SOLVED Over Time</h4>
             <div class="flex">
@@ -98,6 +98,9 @@
               <!-- Heroicon name: solid/chevron-right -->
               <DotsVerticalIcon class="h-6 w-6 text-gray-400 group-hover:text-gray-700"></DotsVerticalIcon>
             </div>
+
+            <!-- Chart -->
+            <ChallengeLineChart/>
           </div>
         </div>
 
