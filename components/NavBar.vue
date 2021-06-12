@@ -114,7 +114,7 @@
               >
 
               <NuxtLink
-                to="/accounts"
+                to="/"
                 class="
                   inline-block
                   px-3
