@@ -1,13 +1,4 @@
 <template>
-  <main class="flex flex-row min-h-screen">
-    <AdminSideBar />
-
-    <div class="relative w-full min-h-screen bg-rhb-blue-50">
-      <!-- Header -->
-      <AdminNavBar />
-
-      <!-- Page heading -->
-
       <main class="px-8 pb-16 mt-4">
         <!-- Stats Card-->
         <div class="mb-8">
@@ -554,8 +545,6 @@
           <AdminPagination />
         </div>
       </main>
-    </div>
-  </main>
 </template>
 
 <script>
@@ -640,6 +629,7 @@ export default {
     ArrowUpIcon,
     ChevronRightIcon,
   },
+  layout: 'admin',
   data() {
     return {
       showFbSharing: false,

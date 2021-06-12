@@ -11,7 +11,7 @@
       <p class="font-light text-xs" style="color: rgba(255, 255, 255, 0.5);">Tech Lead @ SEEK</p>
     </div>
 
-    <div class="bg-rhb-blue-500 bg-opacity-30 flex justify-between py-2">
+    <div class="bg-rhb-blue-500 bg-opacity-30 flex justify-center space-x-8 py-2">
       <div class="flex flex-col text-white px-4 items-center">
         <p class="text-sm">#98</p>
         <p class="text-xs font-light">Rank</p>
