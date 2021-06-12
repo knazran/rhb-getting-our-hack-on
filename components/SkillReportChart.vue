@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       option: {
-          backgroundColor: "#404040",
+        backgroundColor: "#404040",
         grid: {
           left: "3%",
           right: "4%",
@@ -18,9 +18,15 @@ export default {
           top: "6%",
           containLabel: true,
         },
+        // tooltip: {
+        //   show: false,
+        //   trigger: "item",
+        // },
         tooltip: {
-          show: false,
-          trigger: "item",
+          triggerOn: "none",
+          position: function (pt) {
+            return [pt[0], 130];
+          },
         },
         visualMap: {
           show: false,
@@ -32,44 +38,86 @@ export default {
             },
             {
               min: 2,
-              max: 5,
+              max: 11,
               color: "#9ad74a",
             },
             {
-              min: 5,
+              min: 11,
               color: "#40c8fb",
             },
           ],
         },
         xAxis: {
-          data: ["2/5", "8/5", "9/5","16/5", "23/5", "30/5", "6/6", "13/6"],
-          show: false,
+          data: [
+            "2/5",
+            "8/5",
+            "9/5",
+            "24th percentile",
+            "16/5",
+            "16/5",
+            "16/5",
+            "16/5",
+            "16/5",
+            "16/5",
+            "23/5",
+            "30/5",
+            "6/6",
+            "13/6",
+          ],
+          //   show: false,
           color: "#fffff",
-        //   scale: true,
+          axisPointer: {
+              type:'line',
+            value: "24th percentile",
+            snap: true,
+            lineStyle: {
+              color: "#9ad74a",
+              width: 2,
+            },
+            label: {
+              show: true,
+              backgroundColor: "#9ad74a",
+              margin: 6
+            },
+            handle: {
+              show: true,
+              color: "#9ad74a",
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
         },
+
         yAxis: {
           type: "value",
-        //   scale: true,
+          //   scale: true,
           show: true,
         },
         series: [
           {
-            data: [0, 70, 100, 109, 130, 150, 180, 300],
+            data: [
+              0, 70, 100, 109, 120, 130, 140, 150, 162, 172, 180, 201, 230, 300,
+            ],
             type: "line",
             smooth: true,
             areaStyle: {},
             lineStyle: {
-      width: 5
-    },
+              width: 5,
+            },
             markPoint: {
               symbolSize: 30,
               data: [
                 {
                   value: "Skill IQ\n109",
-                  coord: [3, 109],
+                  coord: [3, 111],
                   symbol: "circle",
                   label: {
-                    position: "top",
+                    // position: "left",
+                    position: ['-130%', '-95%'],
                     show: true,
                     color: "#FFFFFF",
                     fontSize: 16,
@@ -82,20 +130,18 @@ export default {
               ],
             },
           },
-        //   {
-        //         data: [0, 70, 109, 130, 150, 180, 300],
-        //         type: 'line',
-        //         smooth: true,
-        //         areaStyle: {}
-        //     }
+          //   {
+          //         data: [0, 70, 109, 130, 150, 180, 300],
+          //         type: 'line',
+          //         smooth: true,
+          //         areaStyle: {}
+          //     }
         ],
       },
     };
   },
   mounted() {
-    var myChart = echarts.init(
-      document.getElementById("skill-report-chart")
-    );
+    var myChart = echarts.init(document.getElementById("skill-report-chart"));
     myChart.setOption(this.option);
   },
 };
