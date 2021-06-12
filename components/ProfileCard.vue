@@ -1,8 +1,5 @@
 <template>
-  <div class='rounded-20 relative h-full bg-opacity-20' style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2); background-size: 100% 100%;" :style="{ backgroundImage: `url(${bgImage})`}">
-    <div class='absolute'>
-        <div class='bg-black w-full' style="filter: drop-shadow(0px 16px 60px rgba(0, 0, 0, 0.2));"></div>
-    </div>
+  <div class='rounded-20 flex flex-col justify-between h-full bg-opacity-20' style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2); background-size: 100% 100%;" :style="{ backgroundImage: `url(${bgImage})`}">
 
     <div class='flex flex-col items-center py-6'>
         <img class='h-20 w-20 mb-4' src='~/assets/profile 1.png'>

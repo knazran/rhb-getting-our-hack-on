@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative rounded-20 py-3 pr-4 pl-6 bg-gray-700 h-full w-full"
+    class="relative rounded-20 py-3 pr-4 pl-6 bg-midnight-blue h-full w-full"
     style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2);"
     >
     <!-- Header -->

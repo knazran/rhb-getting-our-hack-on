@@ -48,7 +48,10 @@ module.exports = {
         },
         'linkedin-blue': {
           DEFAULT: '#0067B1'
-        }
+        },
+        'midnight-blue': {
+          DEFAULT: '#0f0d2a'
+        },
       },
     },
   },
