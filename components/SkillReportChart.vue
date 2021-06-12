@@ -6,11 +6,34 @@
 import * as echarts from "echarts";
 
 export default {
-  name: "ChallengeLineChart",
+  name: "SkillReportChart",
+  props: {
+    mode: {
+      default: 'dark'
+    }
+  },
+  methods: {
+    getBackgroundColor(){
+      if (this.mode === 'dark') {
+        return "#404040"
+      }
+      if (this.mode === 'light') {
+        return "#FFFFFF"
+      }
+    },
+    getTextColor(){
+      if (this.mode === 'dark') {
+        return "#FFFFFF"
+      }
+      if (this.mode === 'light') {
+        return "#404040"
+      }
+    },
+  },
   data() {
     return {
       option: {
-        backgroundColor: "#404040",
+        backgroundColor: this.getBackgroundColor(),
         grid: {
           left: "3%",
           right: "4%",
@@ -34,7 +57,7 @@ export default {
           pieces: [
             {
               max: 2,
-              color: "#fff6d9",
+              color: "#FFEAA6",
             },
             {
               min: 2,
@@ -65,7 +88,7 @@ export default {
             "13/6",
           ],
           //   show: false,
-          color: "#fffff",
+          color: this.getTextColor,
           axisPointer: {
             type: "line",
             value: "24th percentile",
@@ -125,7 +148,7 @@ export default {
                     // position: "left",
                     position: ["-130%", "-120%"],
                     show: true,
-                    color: "#FFFFFF",
+                    color: this.getTextColor(),
                     fontSize: 16,
                     lineHeight: 24,
                   },
@@ -136,12 +159,6 @@ export default {
               ],
             },
           },
-          //   {
-          //         data: [0, 70, 109, 130, 150, 180, 300],
-          //         type: 'line',
-          //         smooth: true,
-          //         areaStyle: {}
-          //     }
         ],
       },
     };
