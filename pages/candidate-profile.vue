@@ -1,19 +1,18 @@
 <template>
   <main class="flex flex-col min-h-screen">
-    <AdminNavBar title="Candidate Profile" />
+    <AdminNavBar title="Candidate Profile"/>
     <div class="container p-10 mx-auto">
+
       <div class="flex items-stretch my-6 text-white">
         <!-- View One -->
         <div class="w-3/12 px-4 rounded-20 2xl:px-8">
-          <ProfileCard mode="light" />
+          <ProfileCard mode='light'/>
         </div>
 
         <!-- View Two -->
-        <div
-          class="w-9/12 px-4 bg-white rounded-20"
-          style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
+        <div class="w-9/12 px-4 rounded-20 bg-white" style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
         >
-          <SkillReportCard mode="light" />
+          <SkillReportCard mode='light'/>
         </div>
       </div>
     </div>
@@ -27,7 +26,7 @@
       </div>
 
       <div
-        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white  rounded-20 hover:border-2 hover:border-rhb-blue-500"
+        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white rounded-20 hover:border-2 hover:border-rhb-blue-500"
         style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
       >
         <div class="flex justify-around col-span-1">
