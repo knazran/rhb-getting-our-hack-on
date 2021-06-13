@@ -748,7 +748,11 @@ export default {
   methods: {
     onSkillClick(value) {
       console.log(value);
-      this.showFbSharing = true;
+
+      if (value.name === 'Go') {
+        this.showFbSharing = true;
+      }
+      
 
       this.clickedSkill = value.name;
     },
