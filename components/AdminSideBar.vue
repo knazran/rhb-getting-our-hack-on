@@ -100,6 +100,14 @@
           <ChartSquareBarIcon class="w-12 h-12"></ChartSquareBarIcon>
           <span class="ml-4">Dashboard</span>
         </NuxtLink>
+
+        <NuxtLink
+          to="/application-tracker"
+          class="flex flex-row items-center px-8 py-4 text-3xl text-white  hover:bg-white hover:text-rhb-blue-500"
+        >
+          <UsersIcon class="w-12 h-12"></UsersIcon>
+          <span class="ml-4">Application Tracker</span>
+        </NuxtLink>
         <!-- </li> -->
         <!-- <li class="px-4 py-1 my-px bg-white">
           <NuxtLink
