@@ -97,7 +97,7 @@
             }`"
           >
             <button
-              class="px-12 py-2 mt-6 mb-4 text-sm font-bold text-gray-100 bg-blue-500 rounded shadow-md  hover:bg-blue-700"
+              class="px-12 py-2 mt-6 mb-4 text-sm font-bold text-gray-100 bg-red-500 rounded shadow-md  hover:bg-red-700"
             >
               Challenge yourself!
             </button>

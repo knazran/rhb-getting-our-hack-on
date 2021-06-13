@@ -1,9 +1,9 @@
 <template>
   <main class="px-8 pb-16 mt-4">
-    <AdminNavBar title="This Month Overview"/>
+    <AdminNavBar class="-ml-8" title="This Month Overview" />
     <!-- Stats Card-->
-    <div class="mb-8">
-      <dl class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-4 mb-8">
+      <dl class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div
           class="relative px-8 py-8 overflow-hidden bg-white rounded-20"
           style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
@@ -90,7 +90,7 @@
     </div>
 
     <!-- Charts -->
-    <div class="grid grid-cols-2 gap-5 mb-8">
+    <div class="grid grid-cols-2 gap-8 mb-8">
       <div
         class="relative px-4 py-4 bg-white rounded-20"
         style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
@@ -749,10 +749,9 @@ export default {
     onSkillClick(value) {
       console.log(value);
 
-      if (value.name === 'Go') {
+      if (value.name === "Go") {
         this.showFbSharing = true;
       }
-      
 
       this.clickedSkill = value.name;
     },
