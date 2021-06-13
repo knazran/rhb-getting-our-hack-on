@@ -92,7 +92,7 @@ export default {
     },
     {
       key: "099u30roj",
-      title: "RHB Challenge #1",
+      title: "Frontend Engineer Challenge",
       description: "Stock Buy Sell to Maximize Profit",
       num_question: "#1",
       difficulty: "Hard",
@@ -158,7 +158,7 @@ export default {
     },
     {
       key: "aksjdhsjfd",
-      title: "RHB Challenge #2",
+      title: "Backend Engineer Challenge",
       description: "K’th Smallest Element (Part 2)",
       num_question: "#2",
       difficulty: "Hard",
@@ -224,7 +224,7 @@ export default {
     },
     {
       key: "sqqqcso99",
-      title: "RHB Challenge #3",
+      title: "DevOps Engineer Challenge",
       description:
         "Minimum Partition - Partition a set into two subsets such that the difference of subset sums is minimum",
       num_question: "#3",
