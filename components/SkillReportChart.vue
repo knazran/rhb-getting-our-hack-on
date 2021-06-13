@@ -57,7 +57,7 @@ export default {
           pieces: [
             {
               max: 2,
-              color: "#FFEAA6",
+              color: "#FFDE73",
             },
             {
               min: 2,
@@ -100,7 +100,7 @@ export default {
               // show: true,
               backgroundColor: "#B1E074",
               margin: 3,
-              color: '#000000',
+              color: this.getTextColor(),
               // fontWeight: "bold",
               fontSize: 16,
               padding: 10
@@ -131,12 +131,35 @@ export default {
         },
         series: [
           {
+              name: 'Skill IQ',
+              type: 'line',
+              smooth: true,
+              areaStyle: {
+                  normal: {
+                      color: '#FFF6D9'
+                  }
+              },
+              data: [0, 70, 100, null, null, null, null, null, null, null, null, null, null, null]
+          },
+          {
+              name: 'Skill IQ',
+              type: 'line',
+              smooth: true,
+              areaStyle: {
+                  normal: {
+                      color: '#C9E99E'
+                  }
+              },
+              data: [null, null, 100, 109, null, null, null, null, null, null, null, null, null, null]
+          },
+          {
             data: [
               0, 70, 100, 109, 120, 130, 140, 150, 162, 172, 180, 201, 230, 300,
             ],
+            name: 'Skill IQ',
             type: "line",
             smooth: true,
-            areaStyle: {},
+            // areaStyle: {},
             lineStyle: {
               width: 5,
             },
