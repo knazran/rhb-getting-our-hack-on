@@ -6,16 +6,7 @@
           <!-- Mobile menu button-->
           <button
             type="button"
-            class="
-              inline-flex
-              items-center
-              justify-center
-              p-2
-              text-gray-400
-              rounded-md
-              hover:text-white hover:bg-gray-700
-              focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
-            "
+            class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -67,16 +58,9 @@
           </button>
         </div>
         <div
-          class="
-            flex
-            items-center
-            justify-center
-            flex-1
-            space-x-4
-            sm:items-stretch sm:justify-start
-          "
+          class="flex items-center justify-center flex-1 space-x-4  sm:items-stretch sm:justify-start"
         >
-          <NuxtLink to='/' class="flex flex-col items-center flex-shrink-0">
+          <NuxtLink to="/" class="flex flex-col items-center flex-shrink-0">
             <!-- <img
               class="block w-auto h-8 lg:hidden"
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -99,77 +83,31 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <NuxtLink
                 to="/"
-                class="
-                  inline-block
-                  px-3
-                  py-2
-                  text-sm
-                  font-medium
-                  text-white
-                  bg-gray-900
-                  rounded-md
-                "
+                class="inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md "
                 aria-current="page"
                 >Challenges</NuxtLink
               >
 
-              <NuxtLink
-                to="/"
-                class="
-                  inline-block
-                  px-3
-                  py-2
-                  text-sm
-                  font-medium
-                  text-gray-300
-                  rounded-md
-                  hover:bg-gray-700 hover:text-white
-                "
-                >Compete</NuxtLink
+              <a
+                href="#"
+                class="inline-block px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
+                >Compete</a
               >
 
               <a
                 href="#"
-                class="
-                  inline-block
-                  px-3
-                  py-2
-                  text-sm
-                  font-medium
-                  text-gray-300
-                  rounded-md
-                  hover:bg-gray-700 hover:text-white
-                "
+                class="inline-block px-3 py-2 text-sm font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
                 >Open Positions</a
               >
             </div>
           </div>
         </div>
         <div
-          class="
-            absolute
-            inset-y-0
-            right-0
-            flex
-            items-center
-            pr-2
-            sm:static sm:inset-auto sm:ml-6 sm:pr-0
-          "
+          class="absolute inset-y-0 right-0 flex items-center pr-2  sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
           <NuxtLink to="/hiring-dashboard">
             <button
-              class="
-                p-1
-                text-gray-400
-                bg-gray-800
-                rounded-full
-                hover:text-white
-                focus:outline-none
-                focus:ring-2
-                focus:ring-offset-2
-                focus:ring-offset-gray-800
-                focus:ring-white
-              "
+              class="p-1 text-gray-400 bg-gray-800 rounded-full  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
             >
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
@@ -197,17 +135,7 @@
               <NuxtLink to="/profile">
                 <button
                   type="button"
-                  class="
-                    flex
-                    text-sm
-                    bg-gray-800
-                    rounded-full
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-offset-2
-                    focus:ring-offset-gray-800
-                    focus:ring-white
-                  "
+                  class="flex text-sm bg-gray-800 rounded-full  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
@@ -272,62 +200,26 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a
           href="#"
-          class="
-            block
-            px-3
-            py-2
-            text-base
-            font-medium
-            text-white
-            bg-gray-900
-            rounded-md
-          "
+          class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md "
           aria-current="page"
           >Dashboard</a
         >
 
         <a
           href="#"
-          class="
-            block
-            px-3
-            py-2
-            text-base
-            font-medium
-            text-gray-300
-            rounded-md
-            hover:bg-gray-700 hover:text-white
-          "
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
           >Team</a
         >
 
         <a
           href="#"
-          class="
-            block
-            px-3
-            py-2
-            text-base
-            font-medium
-            text-gray-300
-            rounded-md
-            hover:bg-gray-700 hover:text-white
-          "
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
           >Projects</a
         >
 
         <a
           href="#"
-          class="
-            block
-            px-3
-            py-2
-            text-base
-            font-medium
-            text-gray-300
-            rounded-md
-            hover:bg-gray-700 hover:text-white
-          "
+          class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md  hover:bg-gray-700 hover:text-white"
           >Calendar</a
         >
       </div>
