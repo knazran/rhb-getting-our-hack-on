@@ -5,8 +5,8 @@
 
       <div class="flex items-stretch my-6 text-white">
         <!-- View One -->
-        <div class="w-3/12 px-4 rounded-20 2xl:px-8">
-          <ProfileCard mode='light'/>
+        <div class="w-3/12 px-4 rounded-20 2xl:px-8 " >
+          <ProfileCard style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)" mode='light'/>
         </div>
 
         <!-- View Two -->
@@ -26,7 +26,7 @@
       </div>
 
       <div
-        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white rounded-20 hover:border-2 hover:border-rhb-blue-500"
+        class="grid w-full grid-cols-3 gap-4 px-5 py-8 bg-white rounded-20"
         style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
       >
         <div class="flex justify-around col-span-1">
@@ -137,7 +137,7 @@
         <div
           v-for="role in roles"
           :key="role.key"
-          class="p-5 bg-white border-2 border-gray-100 shadow-2xl  rounded-2xl hover:border-2 hover:border-rhb-blue-500"
+          class="p-5 bg-white border-2 rounded-20"
         >
           <div class="flex">
             <div class="w-4/5">
