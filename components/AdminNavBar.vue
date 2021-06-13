@@ -76,7 +76,7 @@
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg
-                class="w-10 h-10"
+                class="w-8 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -104,7 +104,7 @@
                 >
                   <span class="sr-only">Open user menu</span>
                   <img
-                    class="rounded-full w-14 h-14"
+                    class="w-10 h-10 rounded-full"
                     src="~/assets/suba.jpeg"
                     alt="Suba's profile photo."
                   />
@@ -255,8 +255,8 @@
 export default {
   props: {
     title: {
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
