@@ -93,31 +93,48 @@ export default {
                 {
                   yAxis: 198,
                   x: "16%",
-                  value: "100%\n198",
+                  name: "100%",
+                  value: "198",
                 },
                 {
                   yAxis: 178,
                   x: "34%",
-                  value: "90%\n178",
+                  name: "90%",
+                  value: "178",
                 },
                 {
                   yAxis: 81,
                   x: "51.5%",
-                  value: "46%\n81",
+                  name: "46%",
+                  value: "81",
                 },
                 {
                   yAxis: 47,
                   x: "69.5%",
-                  value: "51%\n41",
+                  name: "51%",
+                  value: "41",
                 },
                 {
                   yAxis: 44,
                   x: "87%",
-                  value: "93%\n38",
+                  name: "93%",
+                  value: "38",
                 },
               ],
               label: {
-                fontSize: 15,
+                align: "center",
+                formatter: function (params) {
+                  return `{a|${params.name}}\n{b|${params.value}}`;
+                },
+                rich: {
+                  a: {
+                    fontSize: 15.5,
+                  },
+                  b: {
+                    fontSize: 12,
+                    color: "gray",
+                  },
+                },
               },
               itemStyle: {
                 color: "white",
