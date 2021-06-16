@@ -1,18 +1,22 @@
 <template>
   <main class="flex flex-col min-h-screen">
-    <AdminNavBar title="Candidate Profile"/>
+    <AdminNavBar title="Candidate Profile" />
     <div class="container p-10 mx-auto">
-
       <div class="flex items-stretch my-6 text-white">
         <!-- View One -->
-        <div class="w-3/12 px-4 rounded-20 2xl:px-8 " >
-          <ProfileCard style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)" mode='light'/>
+        <div class="w-3/12 px-4 rounded-20 2xl:px-8">
+          <ProfileCard
+            style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
+            mode="light"
+          />
         </div>
 
         <!-- View Two -->
-        <div class="w-9/12 px-4 rounded-20 bg-white" style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
+        <div
+          class="w-9/12 px-4 bg-white rounded-20"
+          style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
         >
-          <SkillReportCard mode='light'/>
+          <SkillReportCard mode="light" />
         </div>
       </div>
     </div>
@@ -129,7 +133,7 @@
     <!-- light mode best roles -->
     <section class="p-10">
       <div class="flex-shrink-0 mb-6">
-        <h1 class="text-3xl font-semibold tracking-wide">BEST ROLES</h1>
+        <h1 class="text-3xl font-semibold tracking-wide">BEST MATCH ROLES</h1>
         <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
       </div>
 

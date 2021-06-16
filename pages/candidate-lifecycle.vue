@@ -147,7 +147,7 @@
         </h3>
         <div class="absolute right-0 p-2 inset-y-1">
           <!-- Heroicon name: solid/chevron-right -->
-          <button @click="isChartLeftSettings = true">
+          <button @click="isChartRightSettings = true">
             <DotsVerticalIcon
               class="w-10 h-10 text-gray-400 group-hover:text-gray-700"
             ></DotsVerticalIcon>
@@ -155,10 +155,10 @@
         </div>
 
         <div
-          v-if="isChartLeftSettings"
+          v-if="isChartRightSettings"
           v-on-clickaway="
             () => {
-              isChartLeftSettings = false;
+              isChartRightSettings = false;
             }
           "
           class="absolute top-0 z-10 w-48 mx-3 mt-1 origin-top-right bg-white divide-y divide-gray-200 rounded-md shadow-lg  right-7 ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -237,7 +237,9 @@
         </div>
 
         <!-- Chart -->
-        <HiringFunnelBarChart v-on:skill-bar-click="onSkillClick($event)" />
+        <HiringFunnelBarChart
+          @hiring-funnel-bar-click="onHiringFunnelClick($event)"
+        />
       </div>
     </div>
 
@@ -417,32 +419,26 @@ export default {
   layout: "admin",
   data() {
     return {
-      showFbSharing: false,
-      clickedSkill: "",
+      clickedHiringFunnel: "",
       isChartRightSettings: false,
       isChartLeftSettings: false,
     };
   },
   computed: {
     applicationList() {
+      if (this.clickedHiringFunnel !== "") {
+        return applications.filter(
+          (app) => app.status === this.clickedHiringFunnel
+        );
+      }
       return applications;
     },
   },
   methods: {
-    onSkillClick(value) {
+    onHiringFunnelClick(value) {
       console.log(value);
 
-      if (value.name === "Go") {
-        this.showFbSharing = true;
-      }
-
-      this.clickedSkill = value.name;
-    },
-    toggleFbSharing() {
-      this.showFbSharing = !this.showFbSharing;
-    },
-    loadImage(url) {
-      return this.require(url);
+      this.clickedHiringFunnel = value.name;
     },
   },
   directives: {
