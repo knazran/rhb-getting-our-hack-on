@@ -87,7 +87,7 @@
           to="/candidate-profile"
           class="flex flex-row items-center px-8 py-4 text-3xl text-white  hover:bg-white hover:text-rhb-blue-500"
         >
-          <UsersIcon class="w-12 h-12"></UsersIcon>
+          <UserIcon class="w-12 h-12"></UserIcon>
           <span class="ml-4">Performance</span>
         </NuxtLink>
         <!-- <li
@@ -105,7 +105,7 @@
           to="/candidate-lifecycle"
           class="flex flex-row items-center px-8 py-4 text-3xl text-white  hover:bg-white hover:text-rhb-blue-500"
         >
-          <UsersIcon class="w-12 h-12"></UsersIcon>
+          <UserGroupIcon class="w-12 h-12"></UserGroupIcon>
           <span class="ml-4">Candidate Lifecycle</span>
         </NuxtLink>
         <!-- </li> -->
@@ -127,7 +127,8 @@
 
 <script>
 import {
-  UsersIcon,
+  UserIcon,
+  UserGroupIcon,
   HomeIcon,
   TerminalIcon,
   ChartSquareBarIcon,
@@ -135,7 +136,8 @@ import {
 
 export default {
   components: {
-    UsersIcon,
+    UserIcon,
+    UserGroupIcon,
     HomeIcon,
     ChartSquareBarIcon,
     TerminalIcon,
