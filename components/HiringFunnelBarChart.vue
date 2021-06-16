@@ -52,8 +52,6 @@ export default {
           scale: true,
           max: 200,
           min: 0,
-          // splitNumber: 4,
-          // boundaryGap: [0.2, 0.2],
           interval: 40,
           axisLabel: {
             show: true,
@@ -128,15 +126,6 @@ export default {
                 shadowColor: "gray",
                 shadowBlur: 10,
               },
-              // [
-              //   // { type: "max", name: "MAX" },
-              //   // { type: "min", name: "MIN" },
-              //   { name: "MAX", value: "100%" },
-              //   { name: "MIN" },
-              // ],
-              // label: {
-              //   show: true,
-              // },
             },
             itemStyle: {
               emphasis: {
