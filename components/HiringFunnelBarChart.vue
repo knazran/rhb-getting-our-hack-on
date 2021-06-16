@@ -6,7 +6,7 @@
 import * as echarts from "echarts";
 
 export default {
-  name: "SkillSetBarChart",
+  name: "HiringFunnelBarChart",
   data() {
     return {
       option: {
