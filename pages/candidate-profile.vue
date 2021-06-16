@@ -5,10 +5,7 @@
       <div class="flex items-stretch my-6 text-white">
         <!-- View One -->
         <div class="w-3/12 px-4 rounded-20 2xl:px-8">
-          <ProfileCard
-            style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
-            mode="light"
-          />
+          <ProfileCard style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)" mode="light" />
         </div>
 
         <!-- View Two -->
@@ -23,9 +20,7 @@
     <!-- light mode candidate assessment -->
     <section class="p-10">
       <div class="flex-shrink-0 mb-6">
-        <h1 class="text-3xl font-semibold tracking-wide">
-          CANDIDATE ASSESSMENT
-        </h1>
+        <h1 class="text-3xl font-semibold tracking-wide">CANDIDATE ASSESSMENT</h1>
         <div class="w-24 h-1 my-1 bg-rhb-blue-500"></div>
       </div>
 
@@ -36,22 +31,16 @@
         <div class="flex justify-around col-span-1">
           <div class="flex flex-col justify-between">
             <div>
-              <p class="text-base font-light text-gray-500">
-                Tien did better than
-              </p>
-              <p class="text-base font-bold text-gray-700">24% of your peers</p>
+              <p class="text-base font-light text-gray-500">Tien did better than</p>
+              <p class="text-base font-bold text-gray-700">24% of his peers</p>
             </div>
 
             <div>
-              <p class="mb-4 text-base font-bold text-gray-700">
-                Looking for someone else?
-              </p>
+              <p class="mb-4 text-base font-bold text-gray-700">Looking for someone else?</p>
               <NuxtLink
                 to="/hiring-dashboard"
-                class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-              >
-                MORE CANDIDATES
-              </NuxtLink>
+                class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+              >MORE CANDIDATES</NuxtLink>
             </div>
 
             <div class="mb-12">
@@ -68,7 +57,7 @@
           <div class="flex items-start justify-between">
             <div>
               <h2
-                class="flex items-center space-x-2 text-3xl font-bold  text-tgray-800 tracking-relaxed"
+                class="flex items-center space-x-2 text-3xl font-bold text-tgray-800 tracking-relaxed"
               >
                 <span>Personalised Skill Analysis</span>
                 <svg
@@ -86,23 +75,15 @@
                   />
                 </svg>
               </h2>
-              <p class="mb-8 text-base font-light text-gray-500">
-                Based on 12 challenges taken
-              </p>
+              <p class="mb-8 text-base font-light text-gray-500">Based on 12 challenges taken</p>
             </div>
-            <span class="px-4 py-2 text-white bg-green-400 rounded-full"
-              >OPEN FOR HIRE</span
-            >
+            <span class="px-4 py-2 text-white bg-green-400 rounded-full">OPEN FOR HIRE</span>
           </div>
 
           <div class="grid w-full grid-cols-2 gap-8 mb-16">
             <div>
               <div class="w-4/5 h-1 my-1 bg-green-500"></div>
-              <h3
-                class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed"
-              >
-                Tien's strengths
-              </h3>
+              <h3 class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed">Tien's strengths</h3>
 
               <div class="flex flex-col space-y-2">
                 <p class="text-base text-gray-800">Concurrency</p>
@@ -113,11 +94,7 @@
 
             <div>
               <div class="w-4/5 h-1 my-1 bg-red-500"></div>
-              <h3
-                class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed"
-              >
-                Tien's gaps
-              </h3>
+              <h3 class="mb-4 text-2xl font-bold text-tgray-800 tracking-relaxed">Tien's gaps</h3>
 
               <div class="flex flex-col space-y-2">
                 <p class="text-base text-gray-800">CLI, REPL and Globals</p>
@@ -138,24 +115,35 @@
       </div>
 
       <div class="grid grid-cols-3 gap-4">
-        <div
-          v-for="role in roles"
-          :key="role.key"
-          class="p-5 bg-white border-2 rounded-20"
-        >
+        <div v-for="role in roles" :key="role.key" class="p-5 bg-white border-2 rounded-20">
+          
           <div class="flex">
             <div class="w-4/5">
-              <h2
-                class="mt-6 text-2xl font-bold text-tgray-800 tracking-relaxed"
-              >
-                {{ role.title }}
-              </h2>
-              <p class="mb-8 text-sm font-light text-gray-500">
-                {{ role.description }}
-              </p>
+              <h2 class="mt-6 text-2xl font-bold text-tgray-800 tracking-relaxed">{{ role.title }}</h2>
+              <p class="mb-8 text-sm font-light text-gray-500">{{ role.description }}</p>
             </div>
             <div class="w-1/5">
-              <p class="text-sm text-right text-tgray-500">{{ role.date }}</p>
+            <popper
+            trigger="hover"
+            :options="{
+              placement: 'right',
+              modifiers: { offset: { offset: '0,10px' } }
+            }"
+          >
+            <div class="px-8 py-4 bg-white rounded-20 shadow-md border-2 border-rhb-blue-500">
+              <span class="text-base font-bold text-gray-700 mr-1">Tien</span>
+              <span class="text-base font-light text-gray-500">is a good match due to strengths in:</span>
+              
+              <div class='mt-2'>
+                <span v-for="skill in role.matched_skills" class='px-4 py-1 rounded-full bg-green-500 text-white text-xs mr-2'>{{skill}}</span>
+              </div>
+              
+             
+            </div>
+
+            <button slot="reference"><p class="text-sm text-right text-green-600">{{ role.date }}</p></button>
+          </popper>
+              <!-- <p class="text-sm text-right text-tgray-500">{{ role.date }}</p> -->
             </div>
           </div>
 
@@ -164,16 +152,13 @@
               v-for="label in role.labels"
               :class="label === 'hotjob' ? 'bg-red-500' : 'bg-blue-500'"
               class="px-8 py-1.5 text-white rounded-full"
-              >{{ label }}</span
-            >
+            >{{ label }}</span>
           </div>
 
           <NuxtLink
             to="/"
-            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md  bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
-          >
-            SEND TO TIEN
-          </NuxtLink>
+            class="inline-flex px-20 py-3 text-sm font-bold text-gray-100 shadow-md bg-rhb-blue-600 rounded-2xl hover:bg-rhb-blue-900"
+          >SEND TO TIEN</NuxtLink>
         </div>
       </div>
     </section>
@@ -187,10 +172,13 @@ import twitterOutlined from "@iconify/icons-ant-design/twitter-outlined";
 import linkedinFilled from "@iconify/icons-ant-design/linkedin-filled";
 import stackoverflowIcon from "@iconify-icons/cib/stackoverflow";
 
+import Popper from 'vue-popperjs';
+import 'vue-popperjs/dist/vue-popper.css';
+
 import roles from "~/data/roles.json";
 
 export default {
-  components: { SkillReportCard, IconifyIcon },
+  components: { SkillReportCard, IconifyIcon, popper: Popper },
   layout: "admin",
   data() {
     return {

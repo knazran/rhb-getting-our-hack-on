@@ -4,13 +4,15 @@
     "title": "Frontend Engineer II",
     "description": "This challenge will test your Vue.js fundamentals and see if you're the right fit.",
     "labels": ["hotjob", "hard to fill"],
-    "date": "90% Match"
+    "date": "90% Match",
+    "matched_skills": ["NodeJS", "Web"]
   },
   {
     "key": "sdvoi98",
     "title": "Devops Engineer",
     "description": "What are the pros and cons implementing infrastructure as a code for financial institutions.",
     "labels": ["hotjob"],
-    "date": "43% Match"
+    "date": "43% Match",
+    "matched_skills": ["Network", "Concurrency"]
   }
 ]
