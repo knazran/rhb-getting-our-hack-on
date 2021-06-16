@@ -5,10 +5,10 @@
     "email": "mujahid.f.anuar@wisc.edu",
     "image": "/mujahid.jpg",
     "status": "Offered",
-    "recruiter": "Suba Letchuman",
+    "assign_to": "Suba Letchuman",
     "tat": 40,
-    "blocker": "",
-    "start_date": "12 March 2021"
+    "notes": "Waiting for response",
+    "target_date": "12 March 2021"
   },
   {
     "key": "2lkdldl",
@@ -16,10 +16,10 @@
     "email": "nazran@umich.edu",
     "image": "/naz.jpeg",
     "status": "Assesment Complete",
-    "recruiter": "Suba Letchuman",
-    "tat": 42,
-    "blocker": "",
-    "start_date": "25 May 2021"
+    "assign_to": "Suba Letchuman",
+    "tat": 1,
+    "notes": "Passed",
+    "target_date": "25 May 2021"
   },
   {
     "key": "sl30090",
@@ -27,9 +27,9 @@
     "email": "tien@seek.com",
     "image": "/tien.png",
     "status": "Signed",
-    "recruiter": "Suba Letchuman",
+    "assign_to": "Suba Letchuman",
     "tat": 35,
-    "blocker": "",
-    "start_date": "3 April 2021"
+    "notes": "Candidate changed start date",
+    "target_date": "3 April 2021"
   }
 ]

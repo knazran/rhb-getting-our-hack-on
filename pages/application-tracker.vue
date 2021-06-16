@@ -1,19 +1,127 @@
 <template>
   <main class="px-8 pb-16 mt-4">
-    <AdminNavBar class="-ml-8" title="This Month Overview" />
+    <AdminNavBar class="-ml-8" title="Candidate Lifecycle" />
 
-    <!-- Charts -->
-    <div class="grid grid-cols-1 gap-8 mb-8">
+    <!-- Candidate lifecycle -->
+    <div class="grid grid-cols-3 gap-8 mt-4 mb-8">
       <div
-        class="relative px-4 py-4 bg-white rounded-20"
+        class="relative col-span-1 px-4 py-4 bg-white rounded-20"
         style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
       >
         <!-- Header -->
         <h4 class="pl-4 text-base text-gray-400 uppercase">
-          CHALLENGE SOLVED CATEGORISE BY SKILL
+          Average turnaround time
         </h4>
         <h3 class="pl-4 text-xl font-semibold text-gray-900 uppercase">
-          Top Skill Set
+          Time to hire
+        </h3>
+        <div class="absolute right-0 p-2 inset-y-1">
+          <!-- Heroicon name: solid/chevron-right -->
+          <button @click="isChartLeftSettings = true">
+            <DotsVerticalIcon
+              class="w-10 h-10 text-gray-400 group-hover:text-gray-700"
+            ></DotsVerticalIcon>
+          </button>
+        </div>
+
+        <div
+          v-if="isChartLeftSettings"
+          v-on-clickaway="
+            () => {
+              isChartLeftSettings = false;
+            }
+          "
+          class="absolute top-0 z-10 w-48 mx-3 mt-1 origin-top-right bg-white divide-y divide-gray-200 rounded-md shadow-lg  right-7 ring-1 ring-black ring-opacity-5 focus:outline-none"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="project-options-menu-0-button"
+          tabindex="-1"
+        >
+          <div class="py-1" role="none">
+            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+            <a
+              href="#"
+              class="flex items-center px-4 py-2 text-sm text-gray-700  group hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              id="project-options-menu-0-item-0"
+            >
+              <svg
+                class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Download as image
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-4 py-2 text-sm text-gray-700  group hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              id="project-options-menu-0-item-1"
+            >
+              <svg
+                class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Export data
+            </a>
+            <a
+              href="#"
+              class="flex items-center px-4 py-2 text-sm text-gray-700  group hover:bg-gray-100"
+              role="menuitem"
+              tabindex="-1"
+              id="project-options-menu-0-item-2"
+            >
+              <svg
+                class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
+                />
+              </svg>
+              Share
+            </a>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <!-- <SkillSetBarChart v-on:skill-bar-click="onSkillClick($event)" /> -->
+      </div>
+
+      <!-- Chart -->
+      <div
+        class="relative col-span-2 px-4 py-4 bg-white rounded-20"
+        style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
+      >
+        <!-- Header -->
+        <h4 class="pl-4 text-base text-gray-400 uppercase">
+          Overall application to onboarding conversation with stage average
+          turnaround time
+        </h4>
+        <h3 class="pl-4 text-xl font-semibold text-gray-900 uppercase">
+          Hiring funnel with turnaround time
         </h3>
         <div class="absolute right-0 p-2 inset-y-1">
           <!-- Heroicon name: solid/chevron-right -->
@@ -111,12 +219,12 @@
       </div>
     </div>
 
-    <!-- Job applications -->
+    <!-- Candidate -->
     <div class="w-full mx-auto mt-8">
       <div class="px-4 mt-4 sm:px-0">
         <div class="relative">
           <h1 class="text-3xl font-semibold tracking-wide uppercase">
-            Application Tracker
+            Candidate
           </h1>
           <div class="w-24 h-1 mt-3 bg-rhb-blue-500"></div>
 
@@ -183,7 +291,7 @@
                       scope="col"
                       class="px-6 py-3 text-sm font-bold tracking-wider text-center text-gray-900 "
                     >
-                      Recruiter
+                      Assign to
                     </th>
                     <th
                       scope="col"
@@ -195,13 +303,13 @@
                       scope="col"
                       class="px-6 py-3 text-sm font-bold tracking-wider text-center text-gray-900 "
                     >
-                      Blocker
+                      Notes
                     </th>
                     <th
                       scope="col"
                       class="px-6 py-3 text-sm font-bold tracking-wider text-center text-gray-900 "
                     >
-                      Start Date
+                      Target Date
                     </th>
                   </tr>
                 </thead>
@@ -237,7 +345,7 @@
                     </td>
                     <td class="px-6 py-4 text-center whitespace-nowrap">
                       <div class="text-sm text-gray-900">
-                        {{ application.recruiter }}
+                        {{ application.assign_to }}
                       </div>
                     </td>
                     <td class="px-6 py-4 text-center whitespace-nowrap">
@@ -248,12 +356,12 @@
                     <td
                       class="px-6 py-4 text-sm text-center text-gray-500  whitespace-nowrap"
                     >
-                      {{ application.blocker }}
+                      {{ application.notes }}
                     </td>
                     <td
                       class="px-6 py-4 text-sm text-center text-gray-500  whitespace-nowrap"
                     >
-                      {{ application.start_date }}
+                      {{ application.target_date }}
                     </td>
                   </tr>
                 </tbody>
@@ -270,10 +378,7 @@
 </template>
 
 <script>
-import {
-  DotsVerticalIcon,
-  ChevronRightIcon,
-} from "@vue-hero-icons/outline";
+import { DotsVerticalIcon, ChevronRightIcon } from "@vue-hero-icons/outline";
 import { ArrowDownIcon, ArrowUpIcon } from "@vue-hero-icons/solid";
 import { directive as onClickaway } from "vue-clickaway2";
 
