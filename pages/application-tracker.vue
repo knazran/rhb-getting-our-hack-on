@@ -4,6 +4,7 @@
 
     <!-- Candidate lifecycle -->
     <div class="grid grid-cols-3 gap-8 mt-4 mb-8">
+      <!-- Infocard -->
       <div
         class="relative col-span-1 px-4 py-4 bg-white rounded-20"
         style="box-shadow: 0px 16px 60px rgba(108, 206, 230, 0.2)"
@@ -106,8 +107,29 @@
           </div>
         </div>
 
-        <!-- Chart -->
-        <!-- <SkillSetBarChart v-on:skill-bar-click="onSkillClick($event)" /> -->
+        <!-- info -->
+        <div class="flex flex-col items-center w-full h-full justify-evenly">
+          <div class="flex flex-row items-center justify-center ml-20">
+            <div class="flex flex-col items-center justify-center">
+              <p class="text-8xl">45</p>
+              <p class="text-xl font-bold">DAYS</p>
+            </div>
+            <div>
+              <p
+                class="flex items-baseline ml-2 text-4xl font-semibold text-red-600 "
+              >
+                <ArrowUpIcon
+                  class="self-center flex-shrink-0 w-10 h-10 text-red-600"
+                ></ArrowUpIcon>
+                <span class="sr-only">Increased by</span>
+                2%
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="text-2xl text-gray-500">From Application to Onboarded</p>
+          </div>
+        </div>
       </div>
 
       <!-- Chart -->
@@ -215,7 +237,7 @@
         </div>
 
         <!-- Chart -->
-        <SkillSetBarChart v-on:skill-bar-click="onSkillClick($event)" />
+        <HiringFunnelBarChart v-on:skill-bar-click="onSkillClick($event)" />
       </div>
     </div>
 
