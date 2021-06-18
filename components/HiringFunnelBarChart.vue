@@ -50,7 +50,7 @@ export default {
             },
           },
           scale: true,
-          max: 200,
+          max: 240,
           min: 0,
           interval: 40,
           axisLabel: {
