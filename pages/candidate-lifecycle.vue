@@ -111,7 +111,7 @@
         <div class="flex flex-col items-center w-full h-full justify-evenly">
           <div class="flex flex-row items-center justify-center ml-20">
             <div class="flex flex-col items-center justify-center">
-              <p class="text-8xl">45</p>
+              <p class="text-8xl">{{ days }}</p>
               <p class="text-xl font-bold">DAYS</p>
             </div>
             <div>
@@ -422,7 +422,15 @@ export default {
       clickedHiringFunnel: "",
       isChartRightSettings: false,
       isChartLeftSettings: false,
+      days: 0,
     };
+  },
+  mounted() {
+    setInterval(() => {
+      if (this.days < 45) {
+        this.days += 1;
+      }
+    }, 37.5);
   },
   computed: {
     applicationList() {
